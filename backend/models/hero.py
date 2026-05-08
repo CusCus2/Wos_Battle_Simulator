@@ -22,3 +22,26 @@ class Hero:
         self.hero_class = hero_data['class']
         self.skills = hero_data['skills']
         self.widget = hero_data['widget']
+
+class Skill:
+    def __init__(self, raw_skill, stars):
+        self.name = raw_skill["name"]
+        self.description = raw_skill["description"]
+
+        self.activation = raw_skill["activation"]
+        self.trigger_count = raw_skill["trigger_count"]
+        self.trigger_troops = raw_skill["trigger_troops"]
+        self.duration_turns = raw_skill["duration_turns"]
+        self.chance = raw_skill["chance"]
+
+        self.effects = [
+            SkillEffect(effect, stars)
+            for effect in raw_skill["effects"]
+        ]
+
+class SkillEffect:
+    def __init__(self, raw_effect, stars):
+        self.buff_type = raw_effect["buff_type"]
+        self.modifier = raw_effect["values"][stars - 1]
+        self.target = raw_effect["target"]
+        self.target_troops = raw_effect["target_troops"]

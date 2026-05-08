@@ -20,7 +20,7 @@ stat_types = ["Lethality", "Attack", "Defense", "Health"]
 BUFF_KEYWORDS = {
     "attack": "attack",
     "damage dealt": "damage",
-    "damage taken": "damage_taken",
+    "damage taken": "damage_taken", 
     "defense": "defense",
     "health": "health",
     "lethality": "lethality",
@@ -31,12 +31,14 @@ BUFF_KEYWORDS = {
 def detect_buff(description):
 
     desc = description.lower()
-
+    keys = []
     for keyword in BUFF_KEYWORDS:
         if keyword in desc:
-            return BUFF_KEYWORDS[keyword]
-
-    return "unknown"
+            keys.append(BUFF_KEYWORDS[keyword])
+    if len(keys) >0:       
+        return keys
+    else:
+        return "unknown"
 
 def parse_values(value_string):
     if not value_string:
@@ -46,6 +48,52 @@ def parse_values(value_string):
         float(v.replace("%","")) / 100
         for v in value_string.split("/")
     ]
+import re
+
+# regex functions for extracting the number of rounds, attacks or % chance skills
+def extract_duration(description):
+    match = re.search(r"for (\d+) turns?", description.lower())
+    return int(match.group(1)) if match else None
+
+def extract_trigger_count(description):
+    match = re.search(r"every (\d+) (attacks|strikes|rounds|turns)", description.lower())
+    return int(match.group(1)) if match else None
+
+def extract_chance(description):
+    match = re.search(r"(\d+)% chance", description.lower())
+    return int(match.group(1)) / 100 if match else None
+
+# buffing all troops or specific type
+def extract_trigger_troops(description):
+    text = description.lower()
+    target = []
+    if "by infantry" in text or "infantry" in text:
+        target.append( "infantry" )
+    if "by lancers" in text or "lancers" in text:
+        target.append( "lancer" )
+    if "by marksmen" in text or "marksmen" in text:
+        target.append( "marksman" )
+
+    return target if target else "all"
+
+# buffing enemy or hot troops
+def extract_target(description):
+    text = description.lower()
+    if "enemy" in text:
+        return "enemy"
+    return "host" 
+
+# this determines activation type, so flat buff or round based etc
+def extract_activation(description):
+    text = description.lower()
+    if "every" in text and ("attack" in text or "strike" in text):
+        return "attack"
+    if "round" in text or "turn" in text:
+        return "round"
+    if "chance" in text:
+        return "chance"
+    return "always"
+
 
 #grabbing just expedition skills and stats for now, will add more later
 heroes = {}
@@ -78,15 +126,34 @@ for hero in names:
         name = card.find("h5").text.strip()
         description = card.find("p", class_="mt-2").text.strip()
 
-        value_tag = card.select_one("strong span")
+        # get buff modifier and target
+        buffs_values = card.select("strong span") # maybe 1 or 2
+        keys = detect_buff(description)
+        if isinstance(keys, str):
+            keys = [keys]
 
-        values = value_tag.text.strip() if value_tag else None
+        effects = []
+
+        for i,  buff in enumerate(buffs_values):
+            buff_text = buff.text.strip()
+            values = parse_values(buff_text)
+            effects.append({
+                'buff_type' : keys[i] if i < len(keys) else 'unknown',
+                'values' : values,
+                'target' : extract_target(description),
+                'target_troops' : extract_trigger_troops(description),
+            })
+            
+            
 
         skill = {
             "name": name,
             "description": description,
-            "buff_type": detect_buff(description),
-            "values": parse_values(values)
+            "activation": extract_activation(description),
+            "trigger_count": extract_trigger_count(description),
+            "duration_turns": extract_duration(description),
+            "chance": extract_chance(description),
+            "effects": effects
         }
 
         skills.append(skill)
