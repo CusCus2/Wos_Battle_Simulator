@@ -20,7 +20,7 @@ class Hero:
         hero_data = load_hero_stats(name)
 
         self.hero_class = hero_data['class']
-        self.skills = hero_data['skills']
+        self.skills = [Skill(skill, stars)for skill in hero_data['skills']]
         self.widget = hero_data['widget']
 
 class Skill:
@@ -30,7 +30,6 @@ class Skill:
 
         self.activation = raw_skill["activation"]
         self.trigger_count = raw_skill["trigger_count"]
-        self.trigger_troops = raw_skill["trigger_troops"]
         self.duration_turns = raw_skill["duration_turns"]
         self.chance = raw_skill["chance"]
 
