@@ -16,7 +16,7 @@ smith = load_hero_stats('Smith')
 
 # print(smith)
 
-hero = Hero('Norah', 5, 9)
+hero = Hero('Jeronimo', 5, 9)
 print (hero.name)
 print (hero.stars)
 print (hero.skills)

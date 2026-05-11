@@ -2264,7 +2264,7 @@
             {
                 "name": "Enmiring Vines",
                 "description": "Flora litters the ground with sharp vines to hobble enemy soldiers, granting all troops a 50% chance of increasing enemies' Damage Taken by 10%/20%/30%/40%/50%.",
-                "activation": "round",
+                "activation": "chance",
                 "trigger_count": null,
                 "duration_turns": null,
                 "chance": 0.5,

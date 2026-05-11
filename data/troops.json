@@ -1,5 +1,5 @@
 {
-  "Infantry": {
+  "infantry": {
     "T11": {
       "1": { "attack": 13, "defense": 16, "health": 18, "lethality": 12 },
       "2": { "attack": 14, "defense": 17, "health": 19, "lethality": 13 },
@@ -23,10 +23,13 @@
       "8": { "attack": 15, "defense": 23, "health": 23, "lethality": 15 },
       "9": { "attack": 16, "defense": 25, "health": 24, "lethality": 15 },
       "10": { "attack": 18, "defense": 26, "health": 25, "lethality": 16 }
+    },
+    "T6": {
+      "0" : { "attack": 6, "defense": 9, "health": 11, "lethality": 6 }
     }
   },
 
-  "Lancer": {
+  "lancer": {
     "T11": {
       "1": { "attack": 16, "defense": 14, "health": 13, "lethality": 17 },
       "2": { "attack": 18, "defense": 15, "health": 14, "lethality": 18 },
@@ -50,10 +53,13 @@
       "8": { "attack": 23, "defense": 17, "health": 15, "lethality": 22 },
       "9": { "attack": 25, "defense": 17, "health": 16, "lethality": 23 },
       "10": { "attack": 26, "defense": 19, "health": 17, "lethality": 24 }
+    },
+    "T6": {
+      "0" : { "attack": 9, "defense": 7, "health": 7, "lethality": 10 }
     }
   },
 
-  "Marksman": {
+  "marksman": {
     "T11": {
       "1": { "attack": 17, "defense": 13, "health": 13, "lethality": 18 },
       "2": { "attack": 19, "defense": 14, "health": 14, "lethality": 19 },
@@ -77,6 +83,9 @@
       "8": { "attack": 24, "defense": 16, "health": 15, "lethality": 23 },
       "9": { "attack": 26, "defense": 17, "health": 16, "lethality": 24 },
       "10": { "attack": 27, "defense": 19, "health": 17, "lethality": 25 }
+    },
+    "T6": {
+      "0" : { "attack": 10, "defense": 6, "health": 6, "lethality": 11 }
     }
   }
 }
