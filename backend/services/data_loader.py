@@ -17,7 +17,7 @@ def load_troop_stats(troop_type, troop_level, FC_level):
 # Hero data
 
 def load_hero_data():
-    path = Path(__file__).parent.parent.parent / "data" / "heroes.json"
+    path = Path(__file__).parent.parent.parent / "data" / "heroes_final.json"
 
     with open(path, "r") as f:
         return json.load(f)

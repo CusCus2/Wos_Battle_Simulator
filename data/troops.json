@@ -3,29 +3,29 @@
     "T11": {
       "1": { "attack": 13, "defense": 16, "health": 18, "lethality": 12 },
       "2": { "attack": 14, "defense": 17, "health": 19, "lethality": 13 },
-      "3": { "attack": 15, "defense": 18, "health": 20, "lethality": 14 },
-      "4": { "attack": 15, "defense": 19, "health": 21, "lethality": 15 },
-      "5": { "attack": 16, "defense": 22, "health": 22, "lethality": 15 },
-      "6": { "attack": 17, "defense": 23, "health": 23, "lethality": 16 },
-      "7": { "attack": 17, "defense": 24, "health": 24, "lethality": 16 },
-      "8": { "attack": 18, "defense": 25, "health": 25, "lethality": 17 },
-      "9": { "attack": 18, "defense": 27, "health": 26, "lethality": 17 },
-      "10": { "attack": 19, "defense": 28, "health": 27, "lethality": 18 }
+      "3": { "attack": 15, "defense": 18, "health": 20, "lethality": 14, "skills" :{ "Crystal Shield" : {"chance" : 0.25, "buff" : "reduce_damage", "value" : 36}  }},
+      "4": { "attack": 15, "defense": 19, "health": 21, "lethality": 15, "skills" :{ "Crystal Shield" : {"chance" : 0.25, "buff" : "reduce_damage", "value" : 36}  } },
+      "5": { "attack": 16, "defense": 22, "health": 22, "lethality": 15, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "6": { "attack": 17, "defense": 23, "health": 23, "lethality": 16, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "7": { "attack": 17, "defense": 24, "health": 24, "lethality": 16, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "8": { "attack": 18, "defense": 25, "health": 25, "lethality": 17, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.04}, "buff2" : {"buff" : "reduce_damage", "value" : 0.1}}  } },
+      "9": { "attack": 18, "defense": 27, "health": 26, "lethality": 17, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.04}, "buff2" : {"buff" : "reduce_damage", "value" : 0.1}}  } },
+      "10": { "attack": 19, "defense": 28, "health": 27, "lethality": 18, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.06}, "buff2" : {"buff" : "reduce_damage", "value" : 0.15}}  } }
     },
     "T10": {
       "1": { "attack": 11, "defense": 14, "health": 16, "lethality": 10 },
       "2": { "attack": 12, "defense": 16, "health": 17, "lethality": 11 },
-      "3": { "attack": 13, "defense": 17, "health": 18, "lethality": 12 },
-      "4": { "attack": 13, "defense": 18, "health": 19, "lethality": 13 },
-      "5": { "attack": 14, "defense": 20, "health": 20, "lethality": 13 },
-      "6": { "attack": 14, "defense": 21, "health": 21, "lethality": 13 },
-      "7": { "attack": 15, "defense": 22, "health": 22, "lethality": 14 },
-      "8": { "attack": 15, "defense": 23, "health": 23, "lethality": 15 },
-      "9": { "attack": 16, "defense": 25, "health": 24, "lethality": 15 },
-      "10": { "attack": 18, "defense": 26, "health": 25, "lethality": 16 }
+      "3": { "attack": 13, "defense": 17, "health": 18, "lethality": 12, "skills" :{ "Crystal Shield" : {"chance" : 0.25, "buff" : "reduce_damage", "value" : 36}  }},
+      "4": { "attack": 13, "defense": 18, "health": 19, "lethality": 13, "skills" :{ "Crystal Shield" : {"chance" : 0.25, "buff" : "reduce_damage", "value" : 36}  } },
+      "5": { "attack": 14, "defense": 20, "health": 20, "lethality": 13, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "6": { "attack": 14, "defense": 21, "health": 21, "lethality": 13, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "7": { "attack": 15, "defense": 22, "health": 22, "lethality": 14, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}  } },
+      "8": { "attack": 15, "defense": 23, "health": 23, "lethality": 15, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.04}, "buff2" : {"buff" : "reduce_damage", "value" : 0.1}}  } },
+      "9": { "attack": 16, "defense": 25, "health": 24, "lethality": 15, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.04}, "buff2" : {"buff" : "reduce_damage", "value" : 0.1}}  } },
+      "10": { "attack": 18, "defense": 26, "health": 25, "lethality": 16, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.06}, "buff2" : {"buff" : "reduce_damage", "value" : 0.15}}  } }
     },
     "T6": {
-      "0" : { "attack": 6, "defense": 9, "health": 11, "lethality": 6 }
+      "0" : { "attack": 6, "defense": 9, "health": 11, "lethality": 6, "skills" : null }
     }
   },
 
@@ -33,29 +33,29 @@
     "T11": {
       "1": { "attack": 16, "defense": 14, "health": 13, "lethality": 17 },
       "2": { "attack": 18, "defense": 15, "health": 14, "lethality": 18 },
-      "3": { "attack": 19, "defense": 16, "health": 15, "lethality": 19 },
-      "4": { "attack": 20, "defense": 16, "health": 15, "lethality": 20 },
-      "5": { "attack": 22, "defense": 17, "health": 16, "lethality": 21 },
-      "6": { "attack": 23, "defense": 17, "health": 16, "lethality": 22 },
-      "7": { "attack": 24, "defense": 18, "health": 17, "lethality": 23 },
-      "8": { "attack": 25, "defense": 19, "health": 17, "lethality": 24 },
-      "9": { "attack": 27, "defense": 19, "health": 18, "lethality": 25 },
-      "10": { "attack": 28, "defense": 21, "health": 20, "lethality": 26 }
+      "3": { "attack": 19, "defense": 16, "health": 15, "lethality": 19, "skills" :{ "Crystal Lance" : {"chance" : 0.1, "buff" : "damage", "value" : 2}  }},
+      "4": { "attack": 20, "defense": 16, "health": 15, "lethality": 20, "skills" :{ "Crystal Lance" : {"chance" : 0.1, "buff" : "damage", "value" : 2} }},
+      "5": { "attack": 22, "defense": 17, "health": 16, "lethality": 21, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} }},
+      "6": { "attack": 23, "defense": 17, "health": 16, "lethality": 22, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} } },
+      "7": { "attack": 24, "defense": 18, "health": 17, "lethality": 23, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} } },
+      "8": { "attack": 25, "defense": 19, "health": 17, "lethality": 24, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.1, "buff" : "reduce_damage", "value" : 2} } },
+      "9": { "attack": 27, "defense": 19, "health": 18, "lethality": 25, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.1, "buff" : "reduce_damage", "value" : 2} } },
+      "10": { "attack": 28, "defense": 21, "health": 20, "lethality": 26, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.15, "buff" : "reduce_damage", "value" : 2} } }
     },
     "T10": {
       "1": { "attack": 14, "defense": 12, "health": 11, "lethality": 15 },
       "2": { "attack": 16, "defense": 13, "health": 12, "lethality": 16 },
-      "3": { "attack": 17, "defense": 14, "health": 13, "lethality": 17 },
-      "4": { "attack": 18, "defense": 14, "health": 13, "lethality": 18 },
-      "5": { "attack": 20, "defense": 15, "health": 14, "lethality": 19 },
-      "6": { "attack": 21, "defense": 15, "health": 14, "lethality": 20 },
-      "7": { "attack": 22, "defense": 16, "health": 15, "lethality": 21 },
-      "8": { "attack": 23, "defense": 17, "health": 15, "lethality": 22 },
-      "9": { "attack": 25, "defense": 17, "health": 16, "lethality": 23 },
-      "10": { "attack": 26, "defense": 19, "health": 17, "lethality": 24 }
+      "3": { "attack": 17, "defense": 14, "health": 13, "lethality": 17, "skills" :{ "Crystal Lance" : {"chance" : 0.1, "buff" : "damage", "value" : 2}  } },
+      "4": { "attack": 18, "defense": 14, "health": 13, "lethality": 18, "skills" :{ "Crystal Lance" : {"chance" : 0.1, "buff" : "damage", "value" : 2}  } },
+      "5": { "attack": 20, "defense": 15, "health": 14, "lethality": 19, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} } },
+      "6": { "attack": 21, "defense": 15, "health": 14, "lethality": 20, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} } },
+      "7": { "attack": 22, "defense": 16, "health": 15, "lethality": 21, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2} } },
+      "8": { "attack": 23, "defense": 17, "health": 15, "lethality": 22, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.1, "buff" : "reduce_damage", "value" : 2} } },
+      "9": { "attack": 25, "defense": 17, "health": 16, "lethality": 23, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.1, "buff" : "reduce_damage", "value" : 2} } },
+      "10": { "attack": 26, "defense": 19, "health": 17, "lethality": 24, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.15, "buff" : "reduce_damage", "value" : 2} } }
     },
     "T6": {
-      "0" : { "attack": 9, "defense": 7, "health": 7, "lethality": 10 }
+      "0" : { "attack": 9, "defense": 7, "health": 7, "lethality": 10, "skills" : null }
     }
   },
 
@@ -63,29 +63,29 @@
     "T11": {
       "1": { "attack": 17, "defense": 13, "health": 13, "lethality": 18 },
       "2": { "attack": 19, "defense": 14, "health": 14, "lethality": 19 },
-      "3": { "attack": 20, "defense": 15, "health": 15, "lethality": 20 },
-      "4": { "attack": 21, "defense": 16, "health": 15, "lethality": 21 },
-      "5": { "attack": 23, "defense": 16, "health": 16, "lethality": 22 },
-      "6": { "attack": 24, "defense": 17, "health": 16, "lethality": 23 },
-      "7": { "attack": 25, "defense": 18, "health": 17, "lethality": 24 },
-      "8": { "attack": 26, "defense": 19, "health": 18, "lethality": 25 },
-      "9": { "attack": 28, "defense": 19, "health": 18, "lethality": 26 },
-      "10": { "attack": 30, "defense": 21, "health": 20, "lethality": 27 }
+      "3": { "attack": 20, "defense": 15, "health": 15, "lethality": 20, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.2, "buff" : "damage", "value" : 0.5}  } },
+      "4": { "attack": 21, "defense": 16, "health": 15, "lethality": 21, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.2, "buff" : "damage", "value" : 0.5}  } },
+      "5": { "attack": 23, "defense": 16, "health": 16, "lethality": 22, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "6": { "attack": 24, "defense": 17, "health": 16, "lethality": 23, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "7": { "attack": 25, "defense": 18, "health": 17, "lethality": 24, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "8": { "attack": 26, "defense": 19, "health": 18, "lethality": 25, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.04}, "buff2" : {"buff" : "damage", "value" : 0.25}}  } },
+      "9": { "attack": 28, "defense": 19, "health": 18, "lethality": 26, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.04}, "buff2" : {"buff" : "damage", "value" : 0.25}}  } },
+      "10": { "attack": 30, "defense": 21, "health": 20, "lethality": 27, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.06}, "buff2" : {"buff" : "damage", "value" : 0.375}}  } }
     },
     "T10": {
       "1": { "attack": 15, "defense": 11, "health": 11, "lethality": 16 },
       "2": { "attack": 17, "defense": 12, "health": 12, "lethality": 17 },
-      "3": { "attack": 18, "defense": 13, "health": 13, "lethality": 18 },
-      "4": { "attack": 19, "defense": 14, "health": 13, "lethality": 19 },
-      "5": { "attack": 21, "defense": 14, "health": 14, "lethality": 20 },
-      "6": { "attack": 22, "defense": 15, "health": 14, "lethality": 21 },
-      "7": { "attack": 23, "defense": 15, "health": 15, "lethality": 22 },
-      "8": { "attack": 24, "defense": 16, "health": 15, "lethality": 23 },
-      "9": { "attack": 26, "defense": 17, "health": 16, "lethality": 24 },
-      "10": { "attack": 27, "defense": 19, "health": 17, "lethality": 25 }
+      "3": { "attack": 18, "defense": 13, "health": 13, "lethality": 18, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.2, "buff" : "damage", "value" : 0.5}  } },
+      "4": { "attack": 19, "defense": 14, "health": 13, "lethality": 19, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.2, "buff" : "damage", "value" : 0.5}  } },
+      "5": { "attack": 21, "defense": 14, "health": 14, "lethality": 20, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "6": { "attack": 22, "defense": 15, "health": 14, "lethality": 21, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "7": { "attack": 23, "defense": 15, "health": 15, "lethality": 22, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}  } },
+      "8": { "attack": 24, "defense": 16, "health": 15, "lethality": 23, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.04}, "buff2" : {"buff" : "damage", "value" : 0.25}}  } },
+      "9": { "attack": 26, "defense": 17, "health": 16, "lethality": 24, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.04}, "buff2" : {"buff" : "damage", "value" : 0.25}}  } },
+      "10": { "attack": 27, "defense": 19, "health": 17, "lethality": 25, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.06}, "buff2" : {"buff" : "damage", "value" : 0.375}}  } }
     },
     "T6": {
-      "0" : { "attack": 10, "defense": 6, "health": 6, "lethality": 11 }
+      "0" : { "attack": 10, "defense": 6, "health": 6, "lethality": 11, "skills" : null }
     }
   }
 }

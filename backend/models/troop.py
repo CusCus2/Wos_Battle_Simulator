@@ -38,3 +38,4 @@ class Troop:
         self.defense = stats['defense']
         self.health = stats['health']
         self.lethality = stats['lethality']
+        self.skills = stats['skills']

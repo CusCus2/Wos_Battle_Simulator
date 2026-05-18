@@ -35,9 +35,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Craftsmanship",
@@ -68,9 +74,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -110,9 +122,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Master Woodcutter",
@@ -143,9 +161,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -185,9 +209,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Coal Extraction",
@@ -218,9 +248,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -260,9 +296,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Predator",
@@ -293,9 +335,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -335,9 +383,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Emerald Warrior",
@@ -368,9 +422,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -410,9 +470,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Enlightened Warfare",
@@ -443,9 +509,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -485,9 +557,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Soothing Dance",
@@ -518,9 +596,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -561,7 +645,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -579,9 +668,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Sneak Strike",
@@ -612,9 +707,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Momentum",
@@ -645,7 +746,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -662,9 +768,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -704,7 +816,12 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -721,9 +838,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Ironclad",
@@ -754,9 +877,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Steel Sentinel",
@@ -787,9 +916,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -829,11 +964,16 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "poison"
                     },
                     {
                         "buff_type": "damage",
-                        "target": "host",
+                        "target": "enemy",
                         "troop_target": [
                             "all"
                         ],
@@ -845,10 +985,16 @@
                             0.16,
                             0.2
                         ],
-                        "condition": "poisoned_target",
-                        "damage_source": "all"
+                        "condition": "poison",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Chemical Terror",
@@ -879,7 +1025,12 @@
                             1.5
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -896,9 +1047,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Toxic Release",
@@ -929,7 +1086,12 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -946,9 +1108,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -988,9 +1156,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Power Shot",
@@ -1008,9 +1182,9 @@
                 "effects": [
                     {
                         "buff_type": "damage",
-                        "target": "enemy",
+                        "target": "host",
                         "troop_target": [
-                            "lancer"
+                            "all"
                         ],
                         "modifier": "increase",
                         "values": [
@@ -1021,13 +1195,18 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "lancer"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
                         "target": "enemy",
                         "troop_target": [
-                            "infantry"
+                            "all"
                         ],
                         "modifier": "increase",
                         "values": [
@@ -1038,9 +1217,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Tactical Assistance",
@@ -1071,9 +1256,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1113,9 +1304,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "King's Bestowal",
@@ -1138,7 +1335,7 @@
                             "infantry"
                         ],
                         "modifier": "increase",
-                        "mulptiplier" : "attack_stat",
+                        "multiplier": "attack_stat",
                         "values": [
                             0.06,
                             0.12,
@@ -1146,10 +1343,16 @@
                             0.24,
                             0.3
                         ],
-                        "condition": "shielded_target",
-                        "damage_source": "all"
+                        "condition": "shield",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Royal Legion",
@@ -1180,9 +1383,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1222,9 +1431,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Bounty Temptation",
@@ -1255,7 +1470,12 @@
                             0.75
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "attack",
@@ -1272,9 +1492,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Torrential Impact",
@@ -1305,9 +1531,15 @@
                             2.5
                         ],
                         "condition": "stun",
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1347,9 +1579,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Armor of Barnacles",
@@ -1380,15 +1618,21 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Dragon's Heir",
                 "description": "Every 3 turns, the ancient abyssal spirit\u2019s descendants will work together with Hendrik\u2019s Marksmen to launch an attack, dealing 8%/16%/24%/32%/40% damage to all enemies.",
                 "activation": "periodic",
-                "trigger_unit": "attack",
+                "trigger_unit": "round",
                 "trigger_count": 3,
                 "duration_turns": null,
                 "chance": null,
@@ -1413,9 +1657,15 @@
                             0.4
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1455,9 +1705,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Iron Phalanx",
@@ -1488,9 +1744,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Iceman",
@@ -1521,7 +1783,12 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -1538,9 +1805,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1580,9 +1853,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Acidification",
@@ -1612,10 +1891,16 @@
                             0.16,
                             0.2
                         ],
-                        "condition": "shielded_target",
-                        "damage_source": "all"
+                        "condition": "shield",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Floodbringer",
@@ -1646,7 +1931,12 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -1663,9 +1953,15 @@
                             0.2
                         ],
                         "condition": "next_turn",
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1705,9 +2001,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Piercing Arrow",
@@ -1738,7 +2040,13 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -1754,10 +2062,17 @@
                             0.2,
                             0.25
                         ],
-                        "condition": "marksmen_target",
-                        "damage_source": "all"
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Unorthodoxy",
@@ -1788,7 +2103,13 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -1805,9 +2126,16 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1847,7 +2175,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "defense",
@@ -1864,9 +2197,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Charged Assault",
@@ -1897,9 +2236,15 @@
                             0.25
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Unbroken",
@@ -1930,9 +2275,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -1972,9 +2323,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Blood Moon Scythe",
@@ -2005,9 +2362,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Night's Vengeance",
@@ -2039,7 +2402,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -2057,9 +2425,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2099,9 +2473,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Blood Hunter",
@@ -2132,9 +2512,16 @@
                             0.75
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "lancer",
+                            "marksman"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Crimson Sniper",
@@ -2164,8 +2551,13 @@
                             0.32,
                             0.4
                         ],
-                        "condition": "marskmen_target",
-                        "damage_source": "all"
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -2182,9 +2574,16 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "lancer",
+                            "marksman"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2224,9 +2623,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Solaris Nexus",
@@ -2257,7 +2662,12 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -2274,9 +2684,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Soaring Flame",
@@ -2307,7 +2723,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -2324,9 +2745,15 @@
                             0.25
                         ],
                         "condition": "infantry_attack",
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2366,15 +2793,21 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Iceflare Bomb",
                 "description": "Lloyd prepares special bomb for all Lancers, which detonates every 3 turns, increases their attack by 30%/60%/90%/120%/150% and releases frosty mist that reduces enemy Lethality by 6%/12%/18%/24%/30% for 1 turn.",
                 "activation": "periodic",
-                "trigger_unit": "attack",
+                "trigger_unit": "round",
                 "trigger_count": 3,
                 "duration_turns": 1,
                 "chance": null,
@@ -2399,7 +2832,12 @@
                             1.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "lethality",
@@ -2416,9 +2854,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Ingenious Mastery",
@@ -2449,9 +2893,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2491,9 +2941,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "burn"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Armor Crush",
@@ -2524,7 +2980,12 @@
                             0.6
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -2541,9 +3002,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Wrathful Quake",
@@ -2574,9 +3041,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2616,9 +3089,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Undying",
@@ -2649,7 +3128,12 @@
                             0.25
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -2666,9 +3150,15 @@
                             0.3
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Battlethirsty",
@@ -2699,7 +3189,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -2716,9 +3211,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2758,9 +3259,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Shieldbreaker",
@@ -2792,7 +3299,12 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "unknown",
@@ -2810,9 +3322,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Standard of Ages",
@@ -2843,7 +3361,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "defense",
@@ -2860,9 +3383,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -2902,9 +3431,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Corrosion",
@@ -2935,7 +3470,12 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "unknown",
@@ -2952,9 +3492,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Toxic Tip",
@@ -2985,7 +3531,12 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -3002,9 +3553,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3044,9 +3601,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Scavengeworks",
@@ -3077,9 +3640,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Trial Shield",
@@ -3109,10 +3678,16 @@
                             0.4,
                             0.5
                         ],
-                        "condition": "shielded_target",
-                        "damage_source": "all"
+                        "condition": "shield",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3152,9 +3727,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Plantage",
@@ -3186,7 +3767,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -3204,9 +3790,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Confusion Pollen",
@@ -3238,7 +3830,12 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -3256,9 +3853,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3298,9 +3901,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Breaker Steel",
@@ -3331,7 +3940,12 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -3348,9 +3962,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "True Strike",
@@ -3382,7 +4002,12 @@
                             0.6
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "defense",
@@ -3400,9 +4025,15 @@
                             0.6
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3442,9 +4073,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Slash Formation Lv.5",
@@ -3475,7 +4112,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "defense",
@@ -3492,9 +4134,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Enchanting Tapestry Lv.5",
@@ -3524,10 +4172,16 @@
                             0.24,
                             0.3
                         ],
-                        "condition": "shielded_target",
-                        "damage_source": "all"
+                        "condition": "shield",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3567,9 +4221,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Spiky Assault",
@@ -3599,8 +4259,13 @@
                             0.48,
                             0.6
                         ],
-                        "condition": "poisoned_target",
-                        "damage_source": "all"
+                        "condition": "poison",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -3616,10 +4281,16 @@
                             0.2,
                             0.25
                         ],
-                        "condition": "poisoned_target",
-                        "damage_source": "all"
+                        "condition": "poison",
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Mirror Maze",
@@ -3651,7 +4322,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "unknown",
@@ -3669,9 +4345,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3711,9 +4393,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Mech Pet",
@@ -3744,16 +4432,22 @@
                             0.3
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Witch's Wrath",
                 "description": "Thanks to Cara's flying broom, she effortlessly bypasses the enemy infantry on the frontline. Her Marksmen deal 8%/16%/24%/32%/40% extra damage to enemy Lancers and 4%/8%/12%/16%/20% extra damage to enemy Marksmen every two attacks",
                 "activation": "periodic",
                 "trigger_unit": "attack",
-                "trigger_count": null,
+                "trigger_count": 2,
                 "duration_turns": null,
                 "chance": null,
                 "stackable": false,
@@ -3779,7 +4473,12 @@
                             0.4
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "unknown",
@@ -3798,9 +4497,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3840,9 +4545,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Flying Sparks",
@@ -3873,7 +4584,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -3890,15 +4606,21 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Raging Force",
                 "description": "Hank's wild attacks weaken enemy morale. Every 4 turns, the damage taken by enemy Infantry is increased by 6%/12%/18%/24%/30%, while the damage dealt by enemy Marksmen is reduced by 6%/12%/18%/24%/30%. This effect lasts for 2 turns.",
                 "activation": "periodic",
-                "trigger_unit": "attack",
+                "trigger_unit": "round",
                 "trigger_count": 4,
                 "duration_turns": 2,
                 "chance": null,
@@ -3924,7 +4646,12 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -3942,9 +4669,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -3984,9 +4717,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Dawn Canvas",
@@ -4017,7 +4756,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "defense",
@@ -4034,9 +4778,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Splendid Scene",
@@ -4068,7 +4818,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -4086,9 +4841,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4128,9 +4889,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Shadow World",
@@ -4161,9 +4928,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Children of the Mist",
@@ -4195,7 +4968,12 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -4213,9 +4991,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4255,9 +5039,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Iron Strength",
@@ -4288,9 +5078,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Poison Harpoon",
@@ -4321,9 +5117,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4363,9 +5165,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "burn"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Burning Resolve",
@@ -4396,9 +5204,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Immolation",
@@ -4429,9 +5243,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "burn"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4471,7 +5291,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "defense",
@@ -4488,9 +5313,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Dosage Boost",
@@ -4521,9 +5352,15 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Energizing Shot",
@@ -4554,9 +5391,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4596,9 +5439,15 @@
                             0.4
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Deterrence of Law",
@@ -4629,9 +5478,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Law and Order",
@@ -4662,9 +5517,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4704,9 +5565,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Lucky Charm",
@@ -4737,9 +5604,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Ritual Deciphering",
@@ -4770,9 +5643,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4812,9 +5691,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Lion Intimidation",
@@ -4845,9 +5730,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Leader Inspiration",
@@ -4878,9 +5769,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -4920,9 +5817,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Melancholic Ballad",
@@ -4953,9 +5856,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Oonai Cadenza",
@@ -4986,9 +5895,15 @@
                             0.05
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5028,9 +5943,15 @@
                             0.3
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Swift Jive",
@@ -5061,9 +5982,15 @@
                             0.2
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Shadow Blade",
@@ -5094,9 +6021,15 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5136,9 +6069,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Rampant",
@@ -5169,7 +6108,12 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -5186,9 +6130,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Blitz",
@@ -5219,9 +6169,15 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5261,7 +6217,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage_taken",
@@ -5278,9 +6239,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Sneak Strike",
@@ -5311,9 +6278,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Momentum",
@@ -5344,7 +6317,12 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage",
@@ -5361,9 +6339,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5403,9 +6387,17 @@
                             2.0
                         ],
                         "condition": "marked_target",
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "effect_timing": "next_turn",
+                        "applies_status": "marked",
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Dreamcatcher",
@@ -5436,9 +6428,17 @@
                             1.5
                         ],
                         "condition": "marked_target",
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "effect_timing": "next_turn",
+                        "applies_status": "marked",
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Dreamslice",
@@ -5469,9 +6469,17 @@
                             0.75
                         ],
                         "condition": "marked_target",
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "effect_timing": "next_turn",
+                        "applies_status": "marked",
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5486,7 +6494,7 @@
                 "name": "Thunder Strike",
                 "description": "Wayne's brilliant battle planning allows all troops to launch an extra attack every 4 turns, dealing 20%/40%/60%/80%/100% damage.",
                 "activation": "periodic",
-                "trigger_unit": "attack",
+                "trigger_unit": "round",
                 "trigger_count": 4,
                 "duration_turns": null,
                 "chance": null,
@@ -5511,9 +6519,15 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Roundabout Hit",
@@ -5543,8 +6557,14 @@
                             0.32,
                             0.4
                         ],
-                        "condition": "marksmen_target",
-                        "damage_source": "all"
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     },
                     {
                         "buff_type": "damage",
@@ -5560,10 +6580,17 @@
                             0.16,
                             0.2
                         ],
-                        "condition": "marksmen_target",
-                        "damage_source": "all"
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "infantry",
+                            "lancer"
+                        ],
+                        "applied_status": "marked"
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Fleet",
@@ -5594,9 +6621,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5636,7 +6669,12 @@
                             0.25
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "normal"
+                        "damage_source": "normal",
+                        "attack_type": "normal",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "damage_taken",
@@ -5653,9 +6691,15 @@
                             0.3
                         ],
                         "condition": "normal_attack",
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Crescent Uplift",
@@ -5686,9 +6730,15 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Elemental Resonance",
@@ -5719,9 +6769,15 @@
                             0.25
                         ],
                         "condition": "skill_damage",
-                        "damage_source": "skill"
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5761,7 +6817,12 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "health",
@@ -5778,9 +6839,15 @@
                             0.1
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Bastionist",
@@ -5811,7 +6878,12 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     },
                     {
                         "buff_type": "unknown",
@@ -5828,9 +6900,15 @@
                             0.15
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Positional Battler",
@@ -5861,9 +6939,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -5903,9 +6987,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Ice Dominion",
@@ -5936,9 +7026,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Youthful Rage",
@@ -5969,9 +7065,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -6011,9 +7113,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Swordmentor",
@@ -6044,9 +7152,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Expert Swordsmanship",
@@ -6077,9 +7191,15 @@
                             0.3
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     },
@@ -6119,9 +7239,15 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Queen of the Wild",
@@ -6152,9 +7278,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             },
             {
                 "name": "Call of the Wild",
@@ -6185,9 +7317,15 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all"
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
                     }
-                ]
+                ],
+                "effect_timing": "round_start"
             }
         ]
     }

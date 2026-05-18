@@ -21,5 +21,5 @@ troops_p2 = Formation(inf_troop2, lcr_troop2, mrk_troop2)
 player2 = Player(stats_p1, None, troops_p1)
 player1 = Player(stats_p2, None, troops_p2)
 
-battle = Battle(player1, player2, 'solo attack')
+battle = Battle(player1, None, player2, None, 'solo attack')
 battle.do_battle()
