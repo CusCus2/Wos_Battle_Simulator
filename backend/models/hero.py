@@ -32,6 +32,13 @@ class Skill:
         self.trigger_count = raw_skill["trigger_count"]
         self.duration_turns = raw_skill["duration_turns"]
         self.chance = raw_skill["chance"]
+        self.effect_timing = raw_skill["effect_timing"]
+        self.trigger_unit = raw_skill["trigger_unit"]
+        self.stackable = raw_skill["stackable"]
+        self.max_stacks = raw_skill["max_stacks"]
+        self.decay = raw_skill["decay"]
+        self.max_triggers = raw_skill["max_triggers"]
+        self.condition = raw_skill["condition"]
 
         self.effects = [
             SkillEffect(effect, stars)
@@ -41,6 +48,12 @@ class Skill:
 class SkillEffect:
     def __init__(self, raw_effect, stars):
         self.buff_type = raw_effect["buff_type"]
-        self.modifier = raw_effect["values"][stars - 1]
+        self.value = raw_effect["values"][stars - 1]/100 # convert the percentage to decimal
         self.target = raw_effect["target"]
-        self.target_troops = raw_effect["target_troops"]
+        self.troop_target = raw_effect["troop_target"]
+        self.modifier = raw_effect["modifier"]
+        self.target = raw_effect["target_troops"]
+        self.damage_source = raw_effect["damage_source"]
+        self.attack_type = raw_effect["attack_type"]
+        self.condition = raw_effect["condition"]
+        self.applied_status = raw_effect["applied_status"]
