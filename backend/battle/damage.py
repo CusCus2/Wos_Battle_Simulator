@@ -1,6 +1,5 @@
 def combine_modifiers(attacker_mods,defender_mods, attacker_troop_type):
     final = {}
-
     keys = [
         "attack",
         "lethality",
