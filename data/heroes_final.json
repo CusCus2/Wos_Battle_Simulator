@@ -1662,7 +1662,7 @@
                         "enemy_troop_target": [
                             "all"
                         ],
-                        "applied_status": "marked"
+                        "applied_status": null
                     }
                 ],
                 "effect_timing": "round_start"
@@ -1891,7 +1891,7 @@
                             0.16,
                             0.2
                         ],
-                        "condition": "shield",
+                        "condition": null,
                         "damage_source": "all",
                         "attack_type": "all",
                         "enemy_troop_target": [
@@ -1918,11 +1918,11 @@
                 "effects": [
                     {
                         "buff_type": "damage",
-                        "target": "enemy",
+                        "target": "host",
                         "troop_target": [
                             "lancer"
                         ],
-                        "modifier": "decrease",
+                        "modifier": "increase",
                         "values": [
                             0.4,
                             0.8,
@@ -1952,7 +1952,7 @@
                             0.16,
                             0.2
                         ],
-                        "condition": "next_turn",
+                        "condition": null,
                         "damage_source": "all",
                         "attack_type": "all",
                         "enemy_troop_target": [

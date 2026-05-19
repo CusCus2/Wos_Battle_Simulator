@@ -3,6 +3,35 @@ from backend.services.data_loader import *
 MAX_STAR_LEVEL = 5
 MAX_WIDGET_LEVEL = 10
 
+class Heroes:
+    def __init__(self,hero1, hero2, hero3):
+        self.hero1 = hero1
+        self.hero2 = hero2
+        self.hero3 = hero3
+
+        self.heroes = [
+            hero1,
+            hero2,
+            hero3
+        ]
+        
+    def __iter__(self):
+        return iter(self.heroes)
+    
+    def __len__(self):
+        return len(self.heroes)
+    
+    @property
+    def all_skills(self):
+
+        skills = []
+
+        for hero in self.heroes:
+            skills.extend(hero.skills)
+
+        return skills
+
+
 class Hero:
     def __init__ (self, name, stars, widget_level = 0):
         
@@ -48,12 +77,12 @@ class Skill:
 class SkillEffect:
     def __init__(self, raw_effect, stars):
         self.buff_type = raw_effect["buff_type"]
-        self.value = raw_effect["values"][stars - 1]/100 # convert the percentage to decimal
+        self.value = raw_effect["values"][stars - 1]
         self.target = raw_effect["target"]
         self.troop_target = raw_effect["troop_target"]
         self.modifier = raw_effect["modifier"]
-        self.target = raw_effect["target_troops"]
         self.damage_source = raw_effect["damage_source"]
         self.attack_type = raw_effect["attack_type"]
         self.condition = raw_effect["condition"]
         self.applied_status = raw_effect["applied_status"]
+        self.enemy_troop_target = raw_effect["enemy_troop_target"]

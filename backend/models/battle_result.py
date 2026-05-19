@@ -34,21 +34,58 @@ class Battle:
             "player1": 0.0,
             "player2": 0.0
         }
+        self.skill_procs = {
+            self.player1 : {},
+            self.player2 : {}
+        }
     
     def do_battle(self):
 
         # need to add one step here first to determine if it is a rally or solo attack, then factor in joiner skills
+        print("----------Commence Battle----------")
+        print(f"player1 attacks player2, it is a {self.type}")
 
+        #initialise skills
+        if self.player1.heroes:
+            for hero in self.player1.heroes:
+                for skill in hero.skills:
+                    self.skill_procs[self.player1][skill.name] = 0
+        self.skill_procs[self.player1]["Crystal Shield"] = 0
+        self.skill_procs[self.player1]["Ambusher"] = 0
+        self.skill_procs[self.player1]["Crystal Lance"] = 0
+        self.skill_procs[self.player1]["Incadescent Field"] = 0
+        self.skill_procs[self.player1]["Volley"] = 0
+        self.skill_procs[self.player1]["Crystal Gunpowder"] = 0
+
+        if self.player2.heroes:
+            for hero in self.player2.heroes:
+                for skill in hero.skills:
+                    self.skill_procs[self.player2][skill.name] = 0
+        self.skill_procs[self.player2]["Crystal Shield"] = 0
+        self.skill_procs[self.player2]["Ambusher"] = 0
+        self.skill_procs[self.player2]["Crystal Lance"] = 0
+        self.skill_procs[self.player2]["Incadescent Field"] = 0
+        self.skill_procs[self.player2]["Volley"] = 0
+        self.skill_procs[self.player2]["Crystal Gunpowder"] = 0
+ 
         while self.player1.troops.total_troop_quantity > 0 and self.player2.troops.total_troop_quantity > 0 and self.round_number <= MAX_ROUNDS:
             self.do_round()
             self.round_number +=1
+
+        print("-----------------------------------")
         print(f"Battle ended in {self.round_number} rounds")
         print(f"Player 1 troops remaining: {self.player1.troops.total_troop_quantity}")
         print(f"Player 2 troops remaining: {self.player2.troops.total_troop_quantity}")
         winner = 1 if self.player1.troops.total_troop_quantity > 0 else 2
         print(f"Player {winner} wins!")
 
+        print("-------------------------------------")
+        print("Skill procs")
+        print("Player 1 skill procs: ", self.skill_procs[self.player1])
+        print("Player 2 skill procs: ", self.skill_procs[self.player2])
+
     def do_round(self):
+        print(f"----------Round {self.round_number}----------")
         # Determine target for both players
         P1_target = self.select_target(self.player2)
         P2_target = self.select_target(self.player1)
@@ -63,25 +100,25 @@ class Battle:
 
         if P1_target is None or P2_target is None:
             return
-        
+        print("player1 attacks")
         if self.player1.troops.infantry.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player1.troops.infantry, P1_target, mods_p1)
+            troop_skills = self.process_troop_skills(self.player1, self.player1.troops.infantry, P1_target, mods_p1)
             p1_kills += self.attack(self.player1, self.player2 ,self.player1.troops.infantry, P1_target, mods_p1, mods_p2, troop_skills)
             print(f"Player 1 infantry attacks Player 2 {P1_target.t_type} for {p1_kills} kills in round {self.round_number}")
             self.attack_counters[self.player1]['infantry'] += 1
 
         if self.player1.troops.lancer.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player1.troops.lancer, P1_target, mods_p1)
+            troop_skills = self.process_troop_skills(self.player1, self.player1.troops.lancer, P1_target, mods_p1)
             if troop_skills[0] == True and self.player2.troops.marksmen.quantity > 0:
                 p1_kills += self.attack(self.player1, self.player2 ,self.player1.troops.lancer, self.player2.troops.marksmen, mods_p1, mods_p2, troop_skills)
-                print(f"Player 1 lancer attacks Player 2 {self.player2.troops.marksmen} for {p1_kills} kills in round {self.round_number}")
+                print(f"Player 1 lancer attacks Player 2 {self.player2.troops.marksmen.t_type} for {p1_kills} kills in round {self.round_number}")
             else:
                 p1_kills += self.attack(self.player1, self.player2 ,self.player1.troops.lancer, P1_target, mods_p1, mods_p2, troop_skills)
                 print(f"Player 1 lancer attacks Player 2 {P1_target.t_type} for {p1_kills} kills in round {self.round_number}")
             self.attack_counters[self.player1]['lancer'] += 1
 
         if self.player1.troops.marksmen.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player1.troops.marksmen, P1_target, mods_p1)
+            troop_skills = self.process_troop_skills(self.player1, self.player1.troops.marksmen, P1_target, mods_p1)
             p1_kills += self.attack(self.player1, self.player2 ,self.player1.troops.marksmen, P1_target, mods_p1, mods_p2, troop_skills)
             # attack twice
             if troop_skills[1] == True and self.player1.troops.marksmen.quantity > 0:
@@ -89,29 +126,30 @@ class Battle:
             print(f"Player 1 marksman attacks Player 2 {P1_target.t_type} for {p1_kills} kills in round {self.round_number}")
             self.attack_counters[self.player1]['marksman'] += 1
 
-
+        print("====================")
+        print("player2 attacks")
         if self.player2.troops.infantry.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player2.troops.infantry, P2_target, mods_p2)
-            p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.infantry, P2_target, mods_p1, mods_p2, troop_skills)
+            troop_skills = self.process_troop_skills(self.player2, self.player2.troops.infantry, P2_target, mods_p2)
+            p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.infantry, P2_target, mods_p2, mods_p1, troop_skills)
             print(f"Player 2 infantry attacks Player 1 {P2_target.t_type} for {p2_kills} kills in round {self.round_number}")
             self.attack_counters[self.player2]['infantry'] += 1
 
         if self.player2.troops.lancer.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player2.troops.lancer, P2_target, mods_p2)
+            troop_skills = self.process_troop_skills(self.player2, self.player2.troops.lancer, P2_target, mods_p2)
             if troop_skills[0] == True:
-                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.lancer, self.player1.troops.marksmen, mods_p1, mods_p2, troop_skills)
+                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.lancer, self.player1.troops.marksmen, mods_p2, mods_p1, troop_skills)
                 print(f"Player 2 lancer attacks Player 1 {self.player1.troops.marksmen.t_type} for {p2_kills} kills in round {self.round_number}")
             else:
-                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.lancer, P2_target, mods_p1, mods_p2, troop_skills)
+                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.lancer, P2_target, mods_p2, mods_p1, troop_skills)
                 print(f"Player 2 lancer attacks Player 1 {P2_target.t_type} for {p2_kills} kills in round {self.round_number}")
             self.attack_counters[self.player2]['lancer'] += 1
 
         if self.player2.troops.marksmen.quantity > 0:
-            troop_skills = self.process_troop_skills(self.player2.troops.marksmen, P2_target, mods_p2)
-            p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.marksmen, P2_target, mods_p1, mods_p2, troop_skills)
+            troop_skills = self.process_troop_skills(self.player2, self.player2.troops.marksmen, P2_target, mods_p2)
+            p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.marksmen, P2_target, mods_p2, mods_p1, troop_skills)
             # attack twice
             if troop_skills[1] == True:
-                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.marksmen, P2_target, mods_p1, mods_p2, troop_skills)
+                p2_kills += self.attack(self.player2, self.player1 ,self.player2.troops.marksmen, P2_target, mods_p2, mods_p1, troop_skills)
             print(f"Player 2 marksman attacks Player 1 {P2_target.t_type} for {p2_kills} kills in round {self.round_number}")
             self.attack_counters[self.player2]['marksman'] += 1
 
@@ -149,7 +187,9 @@ class Battle:
         # calculate damage
         troop_base_attack = attacker_troop__type.attack * (1 + troop_skills[2])
         attacker_mods = combine_modifiers(mods_p1, mods_p2, attacker_troop__type.t_type)
+        print(f" Attacker mods: {attacker_mods}")
         defender_mods = combine_modifiers(mods_p2, mods_p1, defender_troop_type.t_type)
+        print(f"Defender Mods: {defender_mods}")
 
         if mods_p2["host"]["infantry"]["Crystal Shield"] == True and defender_troop_type.t_type == 'infantry': 
             attacker_damage = max(0, damage(troop_base_attack, atk_stats[0], attacker_troop__type.lethality, atk_stats[1], attacker_mods, defender_mods)-36)
@@ -223,7 +263,7 @@ class Battle:
         
         return mods_p1, mods_p2
 
-    def process_troop_skills(self, attacker_troop, defender_type, modifiers):
+    def process_troop_skills(self, player, attacker_troop, defender_type, modifiers):
         skills = attacker_troop.skills or {}
         ambusher = False
         volley = False
@@ -233,10 +273,13 @@ class Battle:
             crystal_shield = skills.get("Crystal Shield")
             if crystal_shield:
                 if chance < skills["Crystal Shield"]["chance"]:
+                    print("--- Crystal Shield skill activated for this round ---")
+                    self.skill_procs[player]["Crystal Shield"] +=1
                     modifiers["host"]["infantry"]["Crystal Shield"] = True
                     if "Body of light" in skills:
+                        print("--- Body of Light skill activated for this round ---")
                         modifiers["host"]["infantry"]["defense"] += skills["Body of light"]["buff1"]["value"]
-                        modifiers["host"]["infantry"]["damage_taken"] += skills["Body of light"]["buff2"]["value"]
+                        modifiers["host"]["infantry"]["damage_taken"] -= skills["Body of light"]["buff2"]["value"]
             if defender_type.t_type == "lancer":
                 modifiers["host"]["infantry"]["normal_attack_damage"] += 0.1
                 modifiers["host"]["infantry"]["defense"] += 0.1
@@ -246,13 +289,19 @@ class Battle:
                 modifiers["host"]["lancer"]["normal_attack_damage"] += 0.1
             #ambusher -> attack marksmen 
             if random.random() < 0.2:
+                print("--- Ambusher skill activated for this round ---")
+                self.skill_procs[player]["Ambusher"] +=1
                 ambusher = True
             crystal_lance = skills.get("Crystal Lance")
             if crystal_lance:
                 if random.random() < skills["Crystal Lance"]["chance"]:
+                    print("--- Crystal Lance skill activated for this round ---")
+                    self.skill_procs[player]["Crystal Lance"] +=1
                     modifiers["host"]["lancer"]["skill_damage"] += skills["Crystal Lance"]["value"]
                     if "Incadescent Field" in skills:
                         if random.random() < skills["Incadescent Field"]["chance"]:
+                            self.skill_procs[player]["Incadescent Field"] +=1
+                            print("--- Incadescent Field skill activated for this round ---")
                             modifiers["host"]["lancer"]["damage_taken"] += skills["Incadescent Field"]["value"]
         
         if attacker_troop.t_type == "marksman":
@@ -260,16 +309,21 @@ class Battle:
                 modifiers["host"]["marksman"]["normal_attack_damage"] += 0.1
             # volley skill .. chance to hit twice ... second strike will not count as a nomal attack nor trigger other skills
             if random.random() < 0.1:
+                print("--- Volley skill activated for this round ---")
+                self.skill_procs[player]["Volley"] +=1
                 volley = True
         
             crystal_gunpowder = skills.get("Crystal Gunpowder")
             if crystal_gunpowder:
                 if random.random() < skills["Crystal Gunpowder"]["chance"]:
+                    print("--- Crystal Gunpowder skill activated for this round ---")
+                    self.skill_procs[player]["Crystal Gunpowder"] +=1
                     modifiers["host"]["marksman"]["damage_dealt"] += skills["Crystal Gunpowder"]["value"]
                     if "Flame Charge" in skills:
-                        modifiers["host"]["marksman"]["damage_dealt"] += skills["Flame Charge"]["value"]
+                        print("--- Flame Charge skill activated for this round ---")
+                        modifiers["host"]["marksman"]["damage_dealt"] += skills["Flame Charge"]["buff2"]["value"]
                         #increase marksmen basic attack by 4%
-                        bonus_damage += 0.04
+                        bonus_damage += skills["Flame Charge"]["buff1"]["value"]
 
         return [ambusher, volley, bonus_damage]
 
@@ -307,7 +361,6 @@ class Battle:
             player,
             modifiers,
             target_troop_type,
-            target_troop_type,
             round_number,
             attack_number
         )
@@ -322,7 +375,6 @@ class Battle:
                         effect=effect,
                         player=player,
                         modifiers=modifiers,
-                        host_troop_type=target_troop_type,
                         target_troop_type=target_troop_type,
                         round_number=round_number,
                         attack_number=self.attack_counters[player][hero.hero_class],
@@ -344,15 +396,18 @@ class Battle:
             player = active["source_player"]
             hero_class = active["class"]
 
+            troop_counter = hero_class
+            if hero_class == "marksmen":
+                troop_counter = "marksman"
+
             self.apply_skill_effect(
                 skill=skill,
                 effect=effect,
                 player=player,
                 modifiers=modifiers,
-                host_troop_type=active["host_troop_type"],
                 target_troop_type=target_troop_type,
                 round_number=round_number,
-                attack_number=self.attack_counters[player][hero_class],
+                attack_number=self.attack_counters[player][troop_counter],
                 still_active=still_active,
                 hero_class = hero_class,
                 from_active_effect=True
@@ -372,11 +427,18 @@ class Battle:
 
         self.active_skill_effects = still_active
 
-    def process_hero_skills(self, player, modifiers, host_troop_type, target_troop_type, round_number, attack_number):
+    def process_hero_skills(self, player, modifiers, target_troop_type, round_number, attack_number):
         for hero in player.heroes:
             for skill in hero.skills:
                 if not skill_activates(skill, round_number, attack_number):
                     continue
+                
+                self.skill_procs[player][skill.name] += 1
+                # print(f"Hero skill {skill.name} activated")
+
+                troop_counter = hero.hero_class
+                if hero.hero_class == "marksmen":
+                    troop_counter = "marksman"
 
                 for effect in skill.effects:
                     self.apply_skill_effect(
@@ -384,30 +446,35 @@ class Battle:
                     effect=effect,
                     player=player,
                     modifiers=modifiers,
-                    host_troop_type=host_troop_type,
                     target_troop_type=target_troop_type,
                     round_number=round_number,
-                    attack_number=self.attack_counters[player][hero.hero_class],
+                    attack_number=self.attack_counters[player][troop_counter],
                     still_active=self.active_skill_effects,
                     hero_class = hero.hero_class,
                     from_active_effect=False
                 )
 
-    def apply_skill_effect(self, skill, effect, player, modifiers, host_troop_type, target_troop_type, round_number, attack_number, still_active, hero_class, from_active_effect=False):
+    def apply_skill_effect(self, skill, effect, player, modifiers, target_troop_type, round_number, attack_number, still_active, hero_class, from_active_effect=False):
         modifier_sign = {
             "increase": 1,
             "decrease": -1
         }
 
         # troop targeting
+        # print(f"Target troop: {target_troop_type.t_type}")
         if not skill_applies_to_enemy_troop(effect,target_troop_type):
             return
 
-        sign = modifier_sign.get(effect.modifier)
-        if sign is None:
+        effect_increment_or_decrement = effect.modifier
+        if effect_increment_or_decrement is None:
             raise ValueError(f"Unknown modifier type: {effect.modifier}")
+        sign = modifier_sign[effect_increment_or_decrement]
         buff_type = effect.buff_type
+        if buff_type == "damage":
+            buff_type = "damage_dealt"
         value = effect.value
+
+        print(f"Buff_type: {buff_type}, Value: {value}, sign: {sign}")
 
         # convert proc damage into skill damage
         if (buff_type == "damage" and skill.activation in ["chance", "periodic"] and effect.attack_type == "skill"):
@@ -446,7 +513,6 @@ class Battle:
                 "skill": skill,
                 "effect": effect,
                 "source_player": player,
-                "host_troop_type": host_troop_type,
                 "target": effect.target,
                 "troop_target": effect.troop_target,
                 "enemy_troop_target": effect.enemy_troop_target,
@@ -469,7 +535,6 @@ class Battle:
                 "skill": skill,
                 "effect": effect,
                 "source_player": player,
-                "host_troop_type": host_troop_type,
                 "target": effect.target,
                 "troop_target": effect.troop_target,
                 "enemy_troop_target": effect.enemy_troop_target,
@@ -505,11 +570,11 @@ def skill_activates(skill, round_number, attack_number):
     return False
     
 def skill_applies_to_troop(effect, troop_type):
-    if effect.troop_target == 'all':
+    if 'all' in effect.troop_target:
         return True
     return troop_type in effect.troop_target
 
 def skill_applies_to_enemy_troop(effect, troop_type):
-    if effect.enemy_troop_target == 'all':
+    if 'all' in effect.enemy_troop_target:
         return True
-    return troop_type in effect.enemy_troop_target
+    return troop_type.t_type in effect.enemy_troop_target
