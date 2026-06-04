@@ -31,6 +31,21 @@ class Heroes:
 
         return skills
 
+class Joiners:
+    MAX_JOINERS = 4
+
+    def __init__ (self, heroes):
+        if len(heroes) > self.MAX_JOINERS:
+            raise ValueError(f"Cannot have more than 4 joiner heroes")
+
+        self.heroes = heroes
+
+    def __iter__(self):
+        return iter(self.heroes)
+    
+    @property
+    def active_skills(self):
+        return [hero.skills[0] for hero in self.heroes]
 
 class Hero:
     def __init__ (self, name, stars, widget_level = 0):

@@ -31,13 +31,13 @@ def damage(atk, atk_sts, lth, lth_sts, attacker_mods, defender_mods):
 
     total_damage = damage * (1 + attacker_mods["damage_dealt"])
 
-    print(
-        "RAW:",raw_damage,
-        "NORMAL:",normal_damage,
-        "SKILL:",skill_damage,
-        "TOTAL:",total_damage
-    )
-    
+    # print(
+    #     "RAW:",raw_damage,
+    #     "NORMAL:",normal_damage,
+    #     "SKILL:",skill_damage,
+    #     "TOTAL:",total_damage
+    # )
+
     return total_damage
 
 # defense formulae

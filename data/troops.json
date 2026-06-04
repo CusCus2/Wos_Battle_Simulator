@@ -26,6 +26,9 @@
     },
     "T6": {
       "0" : { "attack": 6, "defense": 9, "health": 11, "lethality": 6, "skills" : null }
+    },
+    "T12" : {
+      "10": { "attack": 19, "defense": 31, "health": 30, "lethality": 18, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.06}, "buff2" : {"buff" : "reduce_damage", "value" : 0.15}}, "exalted" : {"buff" : "damage_dealt", "target" : "enemy", "value" : 0.018, "max_round" : 5}  } }
     }
   },
 
@@ -56,6 +59,9 @@
     },
     "T6": {
       "0" : { "attack": 9, "defense": 7, "health": 7, "lethality": 10, "skills" : null }
+    },
+    "T12" : {
+      "10": { "attack": 31, "defense": 21, "health": 20, "lethality": 29, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.15, "buff" : "reduce_damage", "value" : 2}, "exalted" : { "buff1" : {"buff" : "damage_taken", "target" : "host", "troop_type" : "infantry", "value" :0.03}, "buff2" : {"buff" : "damage_dealt", "target" : "host", "troop_type" : "marksman", "value" :0.03}} } }
     }
   },
 
@@ -86,6 +92,9 @@
     },
     "T6": {
       "0" : { "attack": 10, "defense": 6, "health": 6, "lethality": 11, "skills" : null }
+    }, 
+    "T12" : {
+      "10": { "attack": 33, "defense": 21, "health": 20, "lethality": 30, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.06}, "buff2" : {"buff" : "damage", "value" : 0.375}}, "exalted" : {"buff" : "damage_dealt", "target" : "host", "troop_type" : "marksman", "value" : 0.015, "round_trigger" : 5}  } }
     }
   }
 }

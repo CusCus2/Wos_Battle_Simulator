@@ -18,8 +18,8 @@ class Troop:
         if quantity < 0 or not isinstance(quantity, int):
             raise ValueError ("Quantity must be a non-negative whole number")
         
-        if not isinstance(level, str) or not level in ['T11', 'T10', 'T6']:
-            raise ValueError ("Level must be a string of either 'T6', 'T10' or 'T11'")
+        if not isinstance(level, str) or not level in ['T11', 'T10', 'T6', 'T12']:
+            raise ValueError ("Level must be a string of either 'T6', 'T10', 'T12' or 'T11'")
 
         if fc <0 or fc > MAX_FC_LEVEL or not isinstance(fc, int):
             raise ValueError (f"FC must be a whole number between 0 and {MAX_FC_LEVEL}")

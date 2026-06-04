@@ -86,6 +86,354 @@
             }
         ]
     },
+    "Patrick": {
+        "class": "lancer",
+        "attack": 1.4011000000000002,
+        "defense": 1.4011000000000002,
+        "widget": null,
+        "widget_buff": null,
+        "skills": [
+            {
+                "name": "Super Nutrients",
+                "description": "Patrick's culinary masterpieces invigorate our troops, increasing Health by 5%/10%/15%/20%/25% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "health",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "increase",
+                        "values": [
+                            0.05,
+                            0.1,
+                            0.15,
+                            0.2,
+                            0.25
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            },
+            {
+                "name": "Caloric Booster",
+                "description": "Patrick's gourmet meals motivate and unleash the potential of our soldiers, increasing Attack by 5%/10%/15%/20%/25% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "attack",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "increase",
+                        "values": [
+                            0.05,
+                            0.1,
+                            0.15,
+                            0.2,
+                            0.25
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            }
+        ]
+    },
+    "Jessie": {
+        "class": "lancer",
+        "attack": 1.4011000000000002,
+        "defense": 1.4011000000000002,
+        "widget": null,
+        "widget_buff": null,
+        "skills": [
+            {
+                "name": "Stand of Arms",
+                "description": "Jessie implement advanced weaponry for our troops, increasing damage dealt by 5%/10%/15%/20%/25% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "damage",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "increase",
+                        "values": [
+                            0.05,
+                            0.1,
+                            0.15,
+                            0.2,
+                            0.25
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            },
+            {
+                "name": "Bulwarks",
+                "description": "With a keen engineering eye, Jessie enhances troops armor, reducing damage taken by 4%/8%/12%/16%/20% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "damage_taken",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "decrease",
+                        "values": [
+                            0.04,
+                            0.08,
+                            0.12,
+                            0.16,
+                            0.2
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            }
+        ]
+    },
+    "Sergey": {
+        "class": "infantry",
+        "attack": 1.4011000000000002,
+        "defense": 1.4011000000000002,
+        "widget": null,
+        "widget_buff": null,
+        "skills": [
+            {
+                "name": "Defenders' Edge",
+                "description": "Sergey's guards our troops with his shield, reducing damage taken by 4%/8%/12%/16%/20% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": "shielded_target",
+                "effects": [
+                    {
+                        "buff_type": "damage_taken",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "decrease",
+                        "values": [
+                            0.04,
+                            0.08,
+                            0.12,
+                            0.16,
+                            0.2
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            },
+            {
+                "name": "Weaken",
+                "description": "Sergey's intimidating presence reduces Attack by 4%/8%/12%/16%/20% for all enemy troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "attack",
+                        "target": "enemy",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "decrease",
+                        "values": [
+                            0.04,
+                            0.08,
+                            0.12,
+                            0.16,
+                            0.2
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            }
+        ]
+    },
+    "Bahiti": {
+        "class": "marksmen",
+        "attack": 1.4011000000000002,
+        "defense": 1.4011000000000002,
+        "widget": null,
+        "widget_buff": null,
+        "skills": [
+            {
+                "name": "Sixth Sense",
+                "description": "Bahiti's senses for dangers ahead, reducing damage taken by 4%/8%/12%/16%/20% for all troops.",
+                "activation": "always",
+                "trigger_unit": null,
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "damage_taken",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "decrease",
+                        "values": [
+                            0.04,
+                            0.08,
+                            0.12,
+                            0.16,
+                            0.2
+                        ],
+                        "condition": null,
+                        "damage_source": "all",
+                        "attack_type": "all",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            },
+            {
+                "name": "Fluorescence",
+                "description": "Bahiti's battlefield instinct grants all troops' attack a 50% chance of increasing damage dealt by 10%/20%/30%/40%/50%.",
+                "activation": "chance",
+                "trigger_unit": "attack",
+                "trigger_count": null,
+                "duration_turns": null,
+                "chance": 0.5,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "attack",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "increase",
+                        "values": [
+                            0.1,
+                            0.2,
+                            0.3,
+                            0.4,
+                            0.5
+                        ],
+                        "condition": null,
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            }
+        ]
+    },
     "Eugene": {
         "class": "infantry",
         "attack": 0.9007,
@@ -707,7 +1055,7 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
+                        "damage_source": "skill",
                         "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
@@ -1317,9 +1665,9 @@
             {
                 "name": "King's Bestowal",
                 "description": "The great kings blesses Gatot\u2019s Infantry, granting Infantry a Shield with protection equal to Attack* 6%/12%/18%/24%/30% each time they attack, for 1 turn.",
-                "activation": "always",
-                "trigger_unit": null,
-                "trigger_count": null,
+                "activation": "periodic",
+                "trigger_unit": "attack",
+                "trigger_count": 2,
                 "duration_turns": 1,
                 "chance": null,
                 "stackable": false,
@@ -1470,7 +1818,7 @@
                             0.75
                         ],
                         "condition": null,
-                        "damage_source": "all",
+                        "damage_source": "skill",
                         "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
@@ -1531,8 +1879,8 @@
                             2.5
                         ],
                         "condition": "stun",
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -1657,8 +2005,8 @@
                             0.4
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -1931,8 +2279,8 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -2040,8 +2388,8 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "infantry",
                             "lancer"
@@ -5604,8 +5952,8 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6021,8 +6369,8 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6169,8 +6517,8 @@
                             2.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6189,8 +6537,8 @@
         "widget_buff": null,
         "skills": [
             {
-                "name": "Combined Arms",
-                "description": "Norah is well trained in combined arms tactics, decreasing Damage Taken by 3%/6%/9%/12%/15% and boosting Damage Dealt by 3%/6%/9%/12%/15% for Infantry and Marksman.",
+                "name": "Eagle Vision",
+                "description": " Gwen provides unfettered vision of ennemy weakpoint during fligths, increasing target's Damage Taken by 5%/10%/15%/20%/25%.",
                 "activation": "always",
                 "trigger_unit": null,
                 "trigger_count": null,
@@ -6203,40 +6551,18 @@
                 "condition": null,
                 "effects": [
                     {
-                        "buff_type": "damage",
-                        "target": "host",
-                        "troop_target": [
-                            "infantry"
-                        ],
-                        "modifier": "decrease",
-                        "values": [
-                            0.03,
-                            0.06,
-                            0.09,
-                            0.12,
-                            0.15
-                        ],
-                        "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
-                        "enemy_troop_target": [
-                            "all"
-                        ],
-                        "applied_status": "marked"
-                    },
-                    {
                         "buff_type": "damage_taken",
-                        "target": "host",
+                        "target": "enemy",
                         "troop_target": [
-                            "infantry"
+                            "all"
                         ],
-                        "modifier": "decrease",
+                        "modifier": "increase",
                         "values": [
-                            0.03,
-                            0.06,
-                            0.09,
-                            0.12,
-                            0.15
+                            0.05,
+                            0.1,
+                            0.15,
+                            0.2,
+                            0.25
                         ],
                         "condition": null,
                         "damage_source": "all",
@@ -6244,19 +6570,19 @@
                         "enemy_troop_target": [
                             "all"
                         ],
-                        "applied_status": "marked"
+                        "applied_status": null
                     }
                 ],
                 "effect_timing": "round_start"
             },
             {
-                "name": "Sneak Strike",
-                "description": "Norah has an eye for weaknesses, granting her Lancers a 20% chance of dealing 20%/40%/60%/80%/100% extra damage to all enemies on attack.",
-                "activation": "chance",
+                "name": "Air Dominance",
+                "description": " Gwen dominates the skies, dealing 20%/40%/60%/80%/100% extra damage once every five attacks and grants 5%/7.5%/10%/12.5%/15% extra damage to the next attack from any source.",
+                "activation": "periodic",
                 "trigger_unit": "attack",
-                "trigger_count": null,
-                "duration_turns": null,
-                "chance": 0.2,
+                "trigger_count": 5,
+                "duration_turns": 1,
+                "chance": null,
                 "stackable": false,
                 "max_stacks": null,
                 "decay": null,
@@ -6264,10 +6590,10 @@
                 "condition": null,
                 "effects": [
                     {
-                        "buff_type": "attack",
+                        "buff_type": "damage",
                         "target": "host",
                         "troop_target": [
-                            "lancer"
+                            "all"
                         ],
                         "modifier": "increase",
                         "values": [
@@ -6278,47 +6604,8 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
-                        "enemy_troop_target": [
-                            "all"
-                        ],
-                        "applied_status": null
-                    }
-                ],
-                "effect_timing": "round_start"
-            },
-            {
-                "name": "Momentum",
-                "description": "Norah motivates our troops, increasing all troops' Damage Dealt by 5%/10%/15%/20%/25% and reducing their damage taken by 5%/10%/15%/20%/25% every 5 attack made by lancer for 2 turns.",
-                "activation": "periodic",
-                "trigger_unit": "attack",
-                "trigger_count": null,
-                "duration_turns": 2,
-                "chance": null,
-                "stackable": false,
-                "max_stacks": null,
-                "decay": null,
-                "max_triggers": null,
-                "condition": null,
-                "effects": [
-                    {
-                        "buff_type": "attack",
-                        "target": "host",
-                        "troop_target": [
-                            "all"
-                        ],
-                        "modifier": "decrease",
-                        "values": [
-                            0.05,
-                            0.1,
-                            0.15,
-                            0.2,
-                            0.25
-                        ],
-                        "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6328,19 +6615,58 @@
                         "buff_type": "damage",
                         "target": "host",
                         "troop_target": [
-                            "all"
+                            "lancer"
                         ],
-                        "modifier": "decrease",
+                        "modifier": "increase",
                         "values": [
                             0.05,
+                            0.075,
                             0.1,
-                            0.15,
+                            0.125,
+                            0.15
+                        ],
+                        "condition": "next_round",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
+                        "enemy_troop_target": [
+                            "all"
+                        ],
+                        "applied_status": null
+                    }
+                ],
+                "effect_timing": "round_start"
+            },
+            {
+                "name": "Blastmaster",
+                "description": " Gwen equips her troops with grenades, dealing 10%/20%/30%/40%/50% extra damage to all ennemies once every 4 attacks.",
+                "activation": "periodic",
+                "trigger_unit": "attack",
+                "trigger_count": 4,
+                "duration_turns": 1,
+                "chance": null,
+                "stackable": false,
+                "max_stacks": null,
+                "decay": null,
+                "max_triggers": null,
+                "condition": null,
+                "effects": [
+                    {
+                        "buff_type": "damage",
+                        "target": "host",
+                        "troop_target": [
+                            "all"
+                        ],
+                        "modifier": "increase",
+                        "values": [
+                            0.1,
                             0.2,
-                            0.25
+                            0.3,
+                            0.4,
+                            0.5
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6519,8 +6845,8 @@
                             1.0
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -6558,8 +6884,8 @@
                             0.4
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "infantry",
                             "lancer"
@@ -6581,8 +6907,8 @@
                             0.2
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "infantry",
                             "lancer"
@@ -6621,8 +6947,8 @@
                             0.25
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
@@ -7026,8 +7352,8 @@
                             0.5
                         ],
                         "condition": null,
-                        "damage_source": "all",
-                        "attack_type": "all",
+                        "damage_source": "skill",
+                        "attack_type": "skill",
                         "enemy_troop_target": [
                             "all"
                         ],
