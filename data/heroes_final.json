@@ -2078,7 +2078,7 @@
                 "condition": null,
                 "effects": [
                     {
-                        "buff_type": "Defense",
+                        "buff_type": "defense",
                         "target": "host",
                         "troop_target": [
                             "infantry"
@@ -2374,7 +2374,7 @@
                 "condition": null,
                 "effects": [
                     {
-                        "buff_type": "unknown",
+                        "buff_type": "damage",
                         "target": "enemy",
                         "troop_target": [
                             "marksman"

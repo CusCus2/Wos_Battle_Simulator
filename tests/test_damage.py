@@ -72,11 +72,11 @@ player2 = Player(stats_p2, heroes_p2, troops_p2)
 # player1 = Player(stats_p1, None, troops_p1)
 # player2 = Player(stats_p2, None, troops_p2)
 
-# battle = Battle(player1, None, player2, None, 'solo attack')
-battle = Battle(player1, joiners_p1, player2, joiners_p2, 'rally')
+battle = Battle(player1, None, player2, None, 'solo attack')
+# battle = Battle(player1, joiners_p1, player2, joiners_p2, 'rally')
 
-# battle.do_battle()
-sim(player1, joiners_p1, player2, joiners_p2, 1000)
+battle.do_battle()
+# sim(player1, joiners_p1, player2, joiners_p2, 1000)
 
 # #test rallies
 # stats_p1 = player_stats(1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000)

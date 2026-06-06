@@ -78,13 +78,15 @@ class Battle:
         print(f"Player 1 troops remaining: {self.player1.troops.total_troop_quantity}")
         print(f"Player 2 troops remaining: {self.player2.troops.total_troop_quantity}")
         winner = 1 if self.player1.troops.total_troop_quantity > 0 else 2
+        attacker_survivors = self.player1.troops.total_troop_quantity
+        defender_survivors = self.player2.troops.total_troop_quantity
         print(f"Player {winner} wins!")
 
         print("-------------------------------------")
         print("Skill procs")
         print("Player 1 skill procs: ", self.skill_procs[self.player1])
         print("Player 2 skill procs: ", self.skill_procs[self.player2])
-        return winner
+        return winner, attacker_survivors, defender_survivors
 
     def do_round(self):
         # print(f"----------Round {self.round_number}----------")

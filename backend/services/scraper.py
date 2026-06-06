@@ -1,13 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-names = [ "Smith", "Eugene", "Charlie", "Cloris", "Lumak Bokan", "Jasser", 
-         "Seo-yoon", "Norah", "Edith", "Gordon", "Bradley", "Gatot", "Sonya", 
-         "Hendrik", "Magnus", "Fred", "Xura", "Gregory", "Freya", "Blanchette", 
-         "Eleonora", "Lloyd", "Rufus", "Hervor", "Karol", "Ligeia", "Gisela", 
-         "Flora", "Vulcanus", "Elif", "Dominic", "Cara", "Hank", "Estrella", 
-         "Viveca", "Alonso", "Flint", "Philly", "Greg", "Mia", "Logan", 
-         "Lynn", "Reina", "Hector", "Gwen", "Renee", "Wayne", 
-         "Wu Ming", "Zinman", "Molly", "Jeronimo", "Natalia" ]
+# names = [ "Smith", "Eugene", "Charlie", "Cloris", "Lumak Bokan", "Jasser", 
+#          "Seo-yoon", "Norah", "Edith", "Gordon", "Bradley", "Gatot", "Sonya", 
+#          "Hendrik", "Magnus", "Fred", "Xura", "Gregory", "Freya", "Blanchette", 
+#          "Eleonora", "Lloyd", "Rufus", "Hervor", "Karol", "Ligeia", "Gisela", 
+#          "Flora", "Vulcanus", "Elif", "Dominic", "Cara", "Hank", "Estrella", 
+#          "Viveca", "Alonso", "Flint", "Philly", "Greg", "Mia", "Logan", 
+#          "Lynn", "Reina", "Hector", "Gwen", "Renee", "Wayne", 
+#          "Wu Ming", "Zinman", "Molly", "Jeronimo", "Natalia" ]
+
+names = ["patrick", "jessie", "sergey", "bahiti"]
 # names = ["Jeronimo", "Natalia"]
 
 url = "https://www.whiteoutsurvival.wiki/heroes/"
