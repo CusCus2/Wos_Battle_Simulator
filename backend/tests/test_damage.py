@@ -26,22 +26,22 @@ from backend.battle.simulator import *
 # battle.do_battle()
 
 # test with heroes
-stats_p1 = player_stats(1915.3, 1897.3, 1198.2, 1349.1, 2027.6, 1959.8, 1311.8, 1085, 1755.7, 1676.8, 1372.2, 1166.4)
-stats_p2 = player_stats(1289.2, 1263, 765.2, 768.2, 1307.7, 1280.3, 683.2, 677.3, 1133.1, 1096.7, 718, 720.8)
+stats_p1 = player_stats(1678.7, 1749.6, 979.6, 1173.9, 1080.6, 1137, 665.6, 635.1, 1942.9, 1982.7, 1293.7, 1224.8)
+stats_p2 = player_stats(3250, 3250, 3250, 3250, 3250, 3250, 3250, 3250, 3250, 3250, 3250, 3250)
 
-inf_troop1 = Troop('Infantry', 'T11', 10, 97383)
-lcr_troop1 = Troop('lanCer', 'T10', 9, 38953)
-mrk_troop1 = Troop('Marksman', 'T11', 9, 58430)
+inf_troop1 = Troop('Infantry', 'T11', 10, 88260)
+lcr_troop1 = Troop('lanCer', 'T10', 9, 0)
+mrk_troop1 = Troop('Marksman', 'T11', 10, 88260)
 troops_p1 = Formation(inf_troop1, lcr_troop1, mrk_troop1)
 
-inf_troop2 = Troop('Infantry', 'T10', 9, 138637)
-lcr_troop2 = Troop('lanCer', 'T10', 9, 462239)
-mrk_troop2 = Troop('Marksman', 'T10', 8, 66973)
+inf_troop2 = Troop('Infantry', 'T10', 0, 182000)
+lcr_troop2 = Troop('lanCer', 'T10', 0, 182000)
+mrk_troop2 = Troop('Marksman', 'T10', 0, 182000)
 troops_p2 = Formation(inf_troop2, lcr_troop2, mrk_troop2)
 
-fred_p1 = Hero( "Fred", 5, widget_level = 5)
+mia_p1 = Hero( "Mia", 5, widget_level = 5)
 gatot_p1 = Hero( "Gatot", 5, widget_level = 6)
-Bradley_p1 = Hero( "Bradley", 5, widget_level = 8)
+blanchette_p1 = Hero( "Blanchette", 5, widget_level = 8)
 
 joiners_p1 = Joiners([
     Hero("Patrick", 5),
@@ -50,7 +50,7 @@ joiners_p1 = Joiners([
     Hero("Hendrik", 5)
     ])
 
-heroes_p1 = Heroes(fred_p1, gatot_p1, Bradley_p1)
+heroes_p1 = Heroes(mia_p1, gatot_p1, blanchette_p1)
 
 fred_p2 = Hero( "Fred", 5, widget_level = 2)
 gatot_p2 = Hero( "Gatot", 5, widget_level = 3)
@@ -67,7 +67,7 @@ joiners_p2 = Joiners([
 heroes_p2 = Heroes(fred_p2, gatot_p2, Hendrik_p2)
 
 player1 = Player(stats_p1, heroes_p1, troops_p1)
-player2 = Player(stats_p2, heroes_p2, troops_p2)
+player2 = Player(stats_p2, None, troops_p2)
 
 # player1 = Player(stats_p1, None, troops_p1)
 # player2 = Player(stats_p2, None, troops_p2)

@@ -38,4 +38,7 @@ class Troop:
         self.defense = stats['defense']
         self.health = stats['health']
         self.lethality = stats['lethality']
-        self.skills = stats['skills']
+        if fc == 0:
+            self.skills = None
+        else:
+            self.skills = stats['skills']

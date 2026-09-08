@@ -13,6 +13,7 @@
       "10": { "attack": 19, "defense": 28, "health": 27, "lethality": 18, "skills" :{ "Crystal Shield" : {"chance" : 0.375, "buff" : "reduce_damage", "value" : 36}, "Body of light" : {"buff1" : {"buff" : "infantry_defense", "value" : 0.06}, "buff2" : {"buff" : "reduce_damage", "value" : 0.15}}  } }
     },
     "T10": {
+      "0": {"attack": 10, "defense": 13, "health": 15, "lethality": 10},
       "1": { "attack": 11, "defense": 14, "health": 16, "lethality": 10 },
       "2": { "attack": 12, "defense": 16, "health": 17, "lethality": 11 },
       "3": { "attack": 13, "defense": 17, "health": 18, "lethality": 12, "skills" :{ "Crystal Shield" : {"chance" : 0.25, "buff" : "reduce_damage", "value" : 36}  }},
@@ -46,6 +47,7 @@
       "10": { "attack": 28, "defense": 21, "health": 20, "lethality": 26, "skills" :{ "Crystal Lance" : {"chance" : 0.15, "buff" : "damage", "value" : 2}, "Incadescent Field" : {"chance" : 0.15, "buff" : "reduce_damage", "value" : 2} } }
     },
     "T10": {
+      "0": { "attack": 13, "defense": 11, "health": 11, "lethality": 14 },
       "1": { "attack": 14, "defense": 12, "health": 11, "lethality": 15 },
       "2": { "attack": 16, "defense": 13, "health": 12, "lethality": 16 },
       "3": { "attack": 17, "defense": 14, "health": 13, "lethality": 17, "skills" :{ "Crystal Lance" : {"chance" : 0.1, "buff" : "damage", "value" : 2}  } },
@@ -79,6 +81,7 @@
       "10": { "attack": 30, "defense": 21, "health": 20, "lethality": 27, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.3, "buff" : "damage", "value" : 0.5}, "Flame Charge" : {"buff1" : {"buff" : "marksmen_attack", "value" : 0.06}, "buff2" : {"buff" : "damage", "value" : 0.375}}  } }
     },
     "T10": {
+      "0": { "attack": 14, "defense": 10, "health": 10, "lethality": 15 },
       "1": { "attack": 15, "defense": 11, "health": 11, "lethality": 16 },
       "2": { "attack": 17, "defense": 12, "health": 12, "lethality": 17 },
       "3": { "attack": 18, "defense": 13, "health": 13, "lethality": 18, "skills" :{ "Crystal Gunpowder" : {"chance" : 0.2, "buff" : "damage", "value" : 0.5}  } },
