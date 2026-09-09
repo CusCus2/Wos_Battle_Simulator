@@ -146,23 +146,11 @@ class Battle:
         while self.player1.troops.total_troop_quantity > 0 and self.player2.troops.total_troop_quantity > 0 and self.round_number <= MAX_ROUNDS:
             #new round so increase round counter
             state.round_number +=1
-            attacker_context = CombatContext(
-                round_number=state.round_number,
-                source_player=self.player1,
-                target_player=self.player2,
-                event="round_start"
-            )
-            defender_context = CombatContext(
-                round_number=state.round_number,
-                source_player=self.player2,
-                target_player=self.player1,
-                event="round_start"
-            )
             # we need to determine what skills are activatedd at round start
 
 
             # carry out the round
-            self.do_round(attacker_army, defender_army, attacker_context, defender_context)
+            self.do_round(attacker_army, defender_army, state)
 
         #result logic
         print("-----------------------------------")
@@ -180,18 +168,20 @@ class Battle:
         print("Player 2 skill procs: ", state.skill_procs[self.player2])
         return winner, attacker_survivors, defender_survivors
 
-    def do_round(self, attacker: ArmyState, defender: ArmyState, attacker_context: CombatContext, defender_context: CombatContext):
+    def do_round(self, attacker: ArmyState, defender: ArmyState, state: BattleState):
         #determine troops alive
         attacker_troops = self.troop_types_alive(attacker.player.troops)
         defender_troops = self.troop_types_alive(defender.player.troops)
 
         # player 1 attacks
         for troop in attacker_troops:
+            attacker_context = CombatContext()
             attacker_troop = getattr(attacker.player.troops, troop)
             defender_troop = self.select_target(defender.player)
             self.do_attack(attacker_troop, defender_troop, )
 
         for troop in defender_troops:
+            defender_context = CombatContext()
             attacker_troop = getattr(defender.player.troops, troop)
             defender_troop = self.select_target(attacker.player)
             self.do_attack(attacker_troop, defender_troop,)
