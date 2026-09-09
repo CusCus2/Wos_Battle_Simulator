@@ -17,11 +17,13 @@
           "every": 1,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "health",
             "values": [
               0.05,
@@ -61,11 +63,13 @@
           "every": 1,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "damage_dealt",
             "values": [
               0.02,
@@ -94,6 +98,7 @@
           },
 
           {
+            "effect_type": "modifier",
             "stat": "damage_taken",
             "values": [
               0.02,
@@ -133,11 +138,13 @@
           "every": 5,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "damage_dealt",
             "values": [
               0.05,
@@ -166,6 +173,7 @@
           },
 
           {
+            "effect_type": "modifier",
             "stat": "damage_taken",
             "values": [
               0.05,
@@ -214,11 +222,13 @@
           "every": 1,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "lethality",
             "values": [
               0.04,
@@ -258,11 +268,13 @@
           "every": 3,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "attack",
             "values": [
               0.30,
@@ -291,6 +303,7 @@
           },
 
           {
+            "effect_type": "modifier",
             "stat": "lethality",
             "values": [
               0.06,
@@ -330,11 +343,13 @@
           "every": 1,
           "chance": 0.4,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "lethality",
             "values": [
               0.10,
@@ -383,11 +398,13 @@
           "every": 1,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "attack",
             "values": [
               0.05,
@@ -427,11 +444,13 @@
           "every": 1,
           "chance": 1.0,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "damage_dealt",
             "values": [
               0.12,
@@ -460,6 +479,7 @@
           },
 
           {
+            "effect_type": "modifier",
             "stat": "damage_taken",
             "values": [
               0.05,
@@ -499,11 +519,13 @@
           "every": 1,
           "chance": 0.2,
           "attack_type": "all",
-          "required_status": null
+          "required_status": null,
+          "counter": null
         },
 
         "effects": [
           {
+            "effect_type": "modifier",
             "stat": "lethality",
             "values": [
               0.10,
@@ -3783,7 +3805,7 @@
           {
             "effect_type": "modifier",
             "stat": "attack",
-            "values": null,
+            "values": [0.01, 0.02, 0.03, 0.04, 0.05],
             "modifier": "increase",
 
             "target_side": "host",

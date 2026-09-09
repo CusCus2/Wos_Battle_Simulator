@@ -72,32 +72,80 @@ class Skill:
         self.name = raw_skill["name"]
         self.description = raw_skill["description"]
 
-        self.activation = raw_skill["activation"]
-        self.trigger_count = raw_skill["trigger_count"]
-        self.duration_turns = raw_skill["duration_turns"]
-        self.chance = raw_skill["chance"]
-        self.effect_timing = raw_skill["effect_timing"]
-        self.trigger_unit = raw_skill["trigger_unit"]
-        self.stackable = raw_skill["stackable"]
-        self.max_stacks = raw_skill["max_stacks"]
-        self.decay = raw_skill["decay"]
-        self.max_triggers = raw_skill["max_triggers"]
-        self.condition = raw_skill["condition"]
+        trigger = raw_skill["trigger"]
 
+        # Trigger rules
+        self.trigger_event = trigger["event"]
+        self.trigger_troop = trigger.get("troop")
+        self.counter = trigger.get("counter")
+        self.every = trigger.get("every", 1)
+
+        # Chance can either be a fixed float or a star-scaled list
+        raw_chance = trigger.get("chance", 1.0)
+
+        if isinstance(raw_chance, list):
+            self.chance = raw_chance[stars - 1]
+        else:
+            self.chance = raw_chance
+
+        self.trigger_attack_type = trigger.get("attack_type", "all")
+        self.trigger_required_status = trigger.get("required_status")
+
+        # Effects
         self.effects = [
             SkillEffect(effect, stars)
             for effect in raw_skill["effects"]
         ]
 
+
 class SkillEffect:
     def __init__(self, raw_effect, stars):
-        self.buff_type = raw_effect["buff_type"]
-        self.value = raw_effect["values"][stars - 1]
-        self.target = raw_effect["target"]
-        self.troop_target = raw_effect["troop_target"]
-        self.modifier = raw_effect["modifier"]
-        self.damage_source = raw_effect["damage_source"]
-        self.attack_type = raw_effect["attack_type"]
-        self.condition = raw_effect["condition"]
-        self.applied_status = raw_effect["applied_status"]
-        self.enemy_troop_target = raw_effect["enemy_troop_target"]
+        # What kind of effect this is:
+        # modifier, direct_damage, status, extra_attack,
+        # shield, dodge, skip_attack, etc.
+        self.effect_type = raw_effect.get("effect_type", "modifier")
+
+        # Main stat / value
+        self.stat = raw_effect.get("stat")
+
+        values = raw_effect.get("values")
+
+        if values is None:
+            self.value = None
+        else:
+            self.value = values[stars - 1]
+
+        self.modifier = raw_effect.get("modifier") # increase/decrease
+
+        # Targeting
+        self.target_side = raw_effect.get("target_side", "host")
+        self.target_troops = raw_effect.get("target_troops", ["all"])
+        self.enemy_troops = raw_effect.get("enemy_troops", ["all"])
+
+        # What attack type this effect applies to
+        self.attack_type = raw_effect.get("attack_type", "all")
+
+        # Status handling
+        self.required_status = raw_effect.get("required_status")
+        self.applied_status = raw_effect.get("applied_status")
+        self.consume_status = raw_effect.get("consume_status")
+
+        # When the effect actually happens relative to the trigger
+        self.timing = raw_effect.get("timing", "on_trigger")
+
+        # Duration
+        duration = raw_effect.get(
+            "duration",
+            {
+                "type": "current_event",
+                "value": None
+            }
+        )
+
+        self.duration_type = duration.get("type", "current_event")
+        self.duration_value = duration.get("value")
+
+        # Optional special behaviour
+        self.scaling_stat = raw_effect.get("scaling_stat", None)
+        self.decay = raw_effect.get("decay", None)
+        self.stackable = raw_effect.get("stackable", False)
