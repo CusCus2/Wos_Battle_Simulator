@@ -94,9 +94,13 @@ class ArmyState:
 
 @dataclass
 class PendingEffect:
+    skill: object
     effect: object
     target_army: ArmyState
     activate_round: int
+
+    attacker_troop: object | None = None
+    defender_troop: object | None = None
 
 @dataclass
 class BattleState: # overall battle state
@@ -178,35 +182,44 @@ class Battle:
         return winner, attacker_survivors, defender_survivors
 
     def do_round(self, attacker: ArmyState, defender: ArmyState, state: BattleState):
-        #determine troops alive
+        #attacker set up
         attacker_troops = self.troop_types_alive(attacker.player.troops)
-        defender_troops = self.troop_types_alive(defender.player.troops)
-        #initialise context at round start
-        attacker_context = CombatContext(
-            round_number= state.round_number,
-            source_player= attacker,
-            target_player= defender,
-            event = "round_start",
-        )
-        defender_context = CombatContext(
-            round_number= state.round_number,
-            source_player= defender,
-            target_player= attacker,
-            event = "round_start",
+        attacker_round_context = CombatContext(
+            round_number=state.round_number,
+            source_player=attacker,
+            target_player=defender,
+            event="round_start"
         )
 
+        self.resolve_round_start_pending_effects(state, attacker_round_context) # applys any pending effects
+        self.process_skill_event(attacker_round_context) # procs any skills that apply at round start
+
+        # defender set up
+        defender_troops = self.troop_types_alive(defender.player.troops)
+        defender_round_context = CombatContext(
+            round_number=state.round_number,
+            source_player=defender,
+            target_player=attacker,
+            event="round_start"
+        )
+        self.resolve_round_start_pending_effects(state, defender_round_context) # applys any pending effects
+        self.process_skill_event(defender_round_context) # procs any skills that apply at round start
+        
+        #initialise context at round start
         # player 1 attacks
         for troop in attacker_troops:
             attacker_troop = troop
             state.attack_counters[attacker.player][attacker_troop.t_type] += 1
             defender_troop = self.select_target(defender.player)
-            # update attacker context
-            attacker_context.attacker_troop = attacker_troop
-            attacker_context.defender_troop = defender_troop
-            attacker_context.attack_number = state.attack_counters[attacker.player][attacker_troop.t_type]
-            attacker_context.attack_type = "normal"
-            # handle pending
-            self.resolve_round_start_pending_effects(state, attacker_context)
+            attacker_context = CombatContext(
+                round_number=state.round_number,
+                source_player=attacker,
+                target_player=defender,
+                attacker_troop=attacker_troop,
+                defender_troop=defender_troop,
+                attack_number=state.attack_counters[attacker.player][attacker_troop.t_type],
+                attack_type="normal"
+            )
 
             # preform attack
             kills = self.do_attack(attacker, defender, attacker_context)
@@ -216,26 +229,29 @@ class Battle:
             state.attack_counters[defender.player][attacker_troop.t_type] += 1
             defender_troop = self.select_target(attacker.player)
             # update attacker context
-            defender_context.attacker_troop = attacker_troop
-            defender_context.defender_troop = defender_troop
-            defender_context.attack_number = state.attack_counters[defender.player][attacker_troop.t_type]
-            defender_context.attack_type = "normal"
+            defender_context = CombatContext(
+                round_number=state.round_number,
+                source_player=defender,
+                target_player=attacker,
+                attacker_troop=attacker_troop,
+                defender_troop=defender_troop,
+                attack_number=state.attack_counters[defender.player][attacker_troop.t_type],
+                attack_type="normal"
+            )
             # handle pending
             # resolve round skills, round number wont change, so itll proc on first attack in round then removed so no dupes
-            self.resolve_round_start_pending_effects(state, attacker_context)
             kills = self.do_attack(defender, attacker, defender_context)
 
         # do dmg calcs
 
         #store results of the round
 
-    def do_attack(self, attacker_troop, defender_troop, context : CombatContext):
+    def do_attack(self, attacker_troop, defender_troop, context : CombatContext, state: BattleState):
         # preform troop attack, using host t_types against curr enemy t_type
         # res of attack shud be a dmg cal, which needs to be returned.
         # the skill procs shud be stored in battle dataclass, i think indexed by round number
 
         context.event = "before_attack"
-        context.attack_number +=1
         self.process_skill_event(context) # procs the skills that activate at start of attack
 
         if context.skip_attack:
@@ -248,9 +264,10 @@ class Battle:
             self.resolve_attack_damage(context)
 
         #resolve affects proc'd earlier but happen after attack
-        self.resolve_pending_atack_effects(context) # of skills procd, some have a second affect thats timing only triggers after atttacking
+        self.resolve_pending_attack_effects(context) # of skills procd, some have a second affect thats timing only triggers after atttacking
+        # The attack has now consumed any attack-based active effects
+        self.update_active_effects("after_attack", context, state)
         # increment the attack counter
-        context.attack_number +=1
 
         context.event = "after_attack"
         self.process_skill_event(context) # skills that only activate after an attack has occured eg freya, her reap can proc after lancers attack, not before. if before cud proc for any t type
@@ -322,11 +339,14 @@ class Battle:
             effect = active_effect.effect
 
             current = getattr(active_mods, effect.stat)
+            value = active_effect.current_value
+            if effect.modifier == "decrease":
+                value = -active_effect.current_value
 
             setattr(
                 active_mods,
                 effect.stat,
-            current + active_effect.current_value
+            current + value
             )
         return active_mods
 
@@ -416,36 +436,52 @@ class Battle:
                 self.resolve_effect(skill, effect, combat, target_army, state)
 
             elif effect.timing == "after_attack":
-                combat.pending_effects.append(effect, target_army)
+                combat.pending_effects.append(skill, effect, target_army)
 
             elif effect.timing == "next_round_start":
-                state.pending_effects.append(PendingEffect(effect=effect, target_army =  target_army, activate_round = state.round_number + 1))
+                state.pending_effects.append(
+                    PendingEffect(skill= skill, effect=effect, target_army =  target_army, 
+                        activate_round = state.round_number + 1, attacker_troop=combat.attacker_troop, defender_troop=combat.defender_troop
+                    )
+                )
 
 
     def resolve_effect(self, skill, effect, combat: CombatContext, target_army: ArmyState, state: BattleState):
-        if effect.duration_type != "current_event":
-            self.create_active_effect(skill, effect, combat, state)
-
-        elif effect.effect_type == "modifier":
-            self.apply_modifier_effect(effect, combat, target_army.modifiers)
+        if effect.effect_type == "modifier":
+            if effect.duration_type == "current_event":
+                self.apply_modifier_effect(effect, combat, target_army.modifiers)
+            else:
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         elif effect.effect_type == "direct_damage":
             self.apply_direct_damage_effect(effect, combat)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         elif effect.effect_type == "shield":
             self.apply_shield_effect(effect, combat, target_army)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         elif effect.effect_type == "extra_attack":
             self.apply_extra_attack_effect(effect, combat)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         elif effect.effect_type == "dodge":
             self.apply_dodge_effect(effect, combat)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         elif effect.effect_type == "skip_attack":
             self.apply_skip_attack_effect(effect, combat)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
         if effect.applied_status is not None:
             self.apply_status_effect( effect, combat, target_army.statuses)
+            if effect.duration_type != "current_event":
+                self.create_active_effect(skill, effect, combat, target_army, state)
 
 
     def get_target_troops(self, effect, combat: CombatContext):
@@ -518,12 +554,12 @@ class Battle:
 
 
     # tackling Pending skill procs / duration effects section
-    def resolve_pending_atack_effects(self, context: CombatContext):
+    def resolve_pending_attack_effects(self, context: CombatContext):
         # we need to check firstly is there any pending effects
         if context.pending_effects is not None:
             #now we loop throught the pending effects for curr round, then clear
-            for effect, target_army in context.pending_effects:
-                self.resolve_effect(effect, context, target_army)
+            for skill, effect, target_army in context.pending_effects:
+                self.resolve_effect(skill, effect, context, target_army)
             context.pending_effects.clear()
 
             # note, we handle skill that activate on next round in the state context not combat
@@ -534,7 +570,7 @@ class Battle:
         for pending in state.pending_effects:
             # check effect procs this round
             if pending.activate_round == state.round_number:
-                self.resolve_effect(pending.effect, combat, pending.target_army)
+                self.resolve_effect(pending.skill, pending.effect, combat, pending.target_army)
             else:
                 remaining.append(pending)
 
@@ -542,12 +578,12 @@ class Battle:
         state.pending_effects = remaining
 
 
-    def create_active_effect(self, skill, effect, context: CombatContext, state: BattleState):
+    def create_active_effect(self, skill, effect, context: CombatContext, army: ArmyState, state: BattleState):
         active = ActiveEffect(
             skill_name= skill.name,
             effect=effect,
             source_player=context.source_player,
-            target_player=context.target_player,
+            target_player=army,
             start_round=state.round_number,
             current_value=effect.value
         )
@@ -558,29 +594,51 @@ class Battle:
         if effect.duration_type == "attacks":
             active.remaining_attacks = (effect.duration_value)
 
-        elif effect.duration_type == "attacks_remaining":
+        elif effect.duration_type == "attacks_received":
             active.remaining_attacks_received = (effect.duration_value)
 
-        return active
+        state.active_effects.append(active)
 
     def update_active_effects(self, event: str, context: CombatContext, state: BattleState):
         for active in state.active_effects:
-            # check to decrement remaining attacks
-            if active.remaining_attacks is not None:
-                if self.attack_consumes_effect(active, context):
-                    active.remaining_attacks -=1
-            # check to decrement remaining attacks receieved
-            if active.remaining_attacks_received is not None:
-                if self.hit_consumes_effect(active, context):
-                    active.remaining_attacks_received -=1
 
-            # handle decay
-            if active.effect.decay is not None:
-                active.current_value *= active.effect.decay
+            if (
+                event == "after_attack"
+                and active.remaining_attacks is not None
+                and self.attack_consumes_effect(active, context)
+            ):
+                active.remaining_attacks -= 1
 
-            # lynn
-            if active.effect.stackable is not None:
-                active.current_value += active.effect.value
+                if active.effect.decay is not None:
+                    active.current_value *= active.effect.decay
+
+            if (
+                event == "after_damage"
+                and active.remaining_attacks_received is not None
+                and self.hit_consumes_effect(active, context)
+            ):
+                active.remaining_attacks_received -= 1
+
+
+
+    def add_active_effect(self, new_effect: ActiveEffect, state: BattleState):
+        if new_effect.effect.stackable:
+
+            for active in state.active_effects:
+
+                same_effect = (
+                    active.skill_name == new_effect.skill_name
+                    and active.source_player is new_effect.source_player
+                    and active.target_player is new_effect.target_player
+                    and active.effect is new_effect.effect
+                )
+
+                if same_effect:
+                    active.stacks += 1
+                    active.current_value += new_effect.effect.value
+                    return
+
+        state.active_effects.append(new_effect)
             
             
 
