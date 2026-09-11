@@ -20,6 +20,7 @@ parts/
 sdist/
 var/
 wheels/
+temp/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -216,3 +217,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+dummy_code.py
+sample_code.py
