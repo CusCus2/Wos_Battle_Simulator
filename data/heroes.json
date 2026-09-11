@@ -3789,7 +3789,7 @@
 
       {
         "name": "Oonai Cadenza",
-        "description": "Lynn harnesses the power of music to elevate troop morale, increasing her Marksmen's attack by 100–5% for every 3 attacks. Stackable and lasts until the end of the battle.",
+        "description": "Lynn harnesses the power of music to elevate troop morale, increasing her Marksmen's attack by 1–5% for every 3 attacks. Stackable and lasts until the end of the battle.",
 
         "trigger": {
           "event": "after_attack",

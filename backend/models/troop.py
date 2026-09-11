@@ -13,7 +13,7 @@ class Formation:
         return self.infantry.quantity + self.lancer.quantity + self.marksmen.quantity
 
 class Troop:
-    def __init__ (self, t_type, level, fc, quantity):
+    def __init__ (self, t_type, level, fc, quantity, exalted_level=0):
 
         if quantity < 0 or not isinstance(quantity, int):
             raise ValueError ("Quantity must be a non-negative whole number")
@@ -27,10 +27,17 @@ class Troop:
         if t_type.lower() not in ['infantry', 'lancer', 'marksman']:
             raise ValueError ("Troop type must be either 'Infantry', 'Lancer', or 'Marksman'")
 
+        if exalted_level < 0 or exalted_level > 24:
+            raise ValueError("Exalted skill level must be between 0 and 24")
+
+        if level != "T12" and exalted_level != 0:
+            raise ValueError( "Only T12 troops can have an Exalted skill level")
+
         self.t_type = t_type.lower()
         self.level = level
         self.fc = fc
         self.quantity = quantity
+        self.exalted_level = exalted_level
 
         # troop stats
         stats = load_troop_stats(t_type.lower(), level, str(fc))

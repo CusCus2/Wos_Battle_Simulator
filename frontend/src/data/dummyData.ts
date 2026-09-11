@@ -89,6 +89,7 @@ export interface TroopSlot {
   level: TroopTier;
   fc: number;
   quantity: number;
+  exaltedLevel: number;
 }
 
 export interface PlayerStats {
@@ -183,9 +184,9 @@ export const defaultAttacker: SideConfig = {
     defaultHero("Hendrik"),
   ],
   troops: {
-    infantry: { level: "T11", fc: 10, quantity: 97383 },
-    lancer: { level: "T10", fc: 9, quantity: 38953 },
-    marksmen: { level: "T11", fc: 9, quantity: 58430 },
+    infantry: { level: "T11", fc: 10, quantity: 97383, exaltedLevel: 0, },
+    lancer: { level: "T10", fc: 9, quantity: 38953, exaltedLevel: 0, },
+    marksmen: { level: "T11", fc: 9, quantity: 58430, exaltedLevel: 0,},
   },
 };
 
@@ -217,9 +218,9 @@ export const defaultDefender: SideConfig = {
     defaultHero("Hendrik"),
   ],
   troops: {
-    infantry: { level: "T10", fc: 9, quantity: 138637 },
-    lancer: { level: "T10", fc: 9, quantity: 462239 },
-    marksmen: { level: "T10", fc: 8, quantity: 66973 },
+    infantry: { level: "T10", fc: 9, quantity: 138637, exaltedLevel: 0, },
+    lancer: { level: "T10", fc: 9, quantity: 462239, exaltedLevel: 0, },
+    marksmen: { level: "T10", fc: 8, quantity: 66973, exaltedLevel: 0, },
   },
 };
 

@@ -9,9 +9,14 @@ interface PlayerSectionProps {
   joinersToggleLabel: "Rally" | "Garrison";
   config: SideConfig;
   onChange: (config: SideConfig) => void;
+  maxExaltedLevel: number;
 }
 
-const HOST_HERO_LABELS = ["Hero 1 (Infantry)", "Hero 2 (Lancer)", "Hero 3 (Marksmen)"] as const;
+const HOST_HERO_LABELS = [
+  "Hero 1 (Infantry)",
+  "Hero 2 (Lancer)",
+  "Hero 3 (Marksmen)",
+] as const;
 
 const accentClasses = {
   sky: "border-sky-500/40 from-sky-950/40",
@@ -24,14 +29,21 @@ export default function PlayerSection({
   joinersToggleLabel,
   config,
   onChange,
+  maxExaltedLevel,
 }: PlayerSectionProps) {
-  const updateHero = (index: number, hero: SideConfig["heroes"][number]) => {
+  const updateHero = (
+    index: number,
+    hero: SideConfig["heroes"][number],
+  ) => {
     const heroes = [...config.heroes] as SideConfig["heroes"];
     heroes[index] = hero;
     onChange({ ...config, heroes });
   };
 
-  const updateJoiner = (index: number, hero: SideConfig["heroes"][number]) => {
+  const updateJoiner = (
+    index: number,
+    hero: SideConfig["heroes"][number],
+  ) => {
     const joiners = [...config.joiners];
     joiners[index] = hero;
     onChange({ ...config, joiners });
@@ -52,6 +64,7 @@ export default function PlayerSection({
 
       <div className="mb-5 space-y-3">
         <h3 className="text-sm font-semibold text-slate-200">Main Heroes</h3>
+
         {config.heroes.map((hero, index) => (
           <HeroSelect
             key={`hero-${index}`}
@@ -68,10 +81,14 @@ export default function PlayerSection({
           type="checkbox"
           checked={config.joinersEnabled}
           onChange={(e) =>
-            onChange({ ...config, joinersEnabled: e.target.checked })
+            onChange({
+              ...config,
+              joinersEnabled: e.target.checked,
+            })
           }
           className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-sky-500 focus:ring-sky-500"
         />
+
         <span className="text-sm font-medium text-slate-200">
           {joinersToggleLabel}
         </span>
@@ -82,6 +99,7 @@ export default function PlayerSection({
           <h3 className="text-sm font-semibold text-slate-200">
             Joiners (up to 4)
           </h3>
+
           {config.joiners.map((joiner, index) => (
             <HeroSelect
               key={`joiner-${index}`}
@@ -96,6 +114,7 @@ export default function PlayerSection({
 
       <TroopInputs
         troops={config.troops}
+        maxExaltedLevel={maxExaltedLevel}
         onChange={(troops) => onChange({ ...config, troops })}
       />
     </section>
