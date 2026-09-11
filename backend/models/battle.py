@@ -316,7 +316,7 @@ class Battle:
             # self.do_attack_skill_flow(context, state)
         
         # round end
-        self.apply_round_losses(round_losses, context)
+        self.apply_round_losses(round_losses, state)
     
     def do_attack(self, context: CombatContext, state: BattleState) -> float:
         total_kills = 0.0
@@ -378,25 +378,22 @@ class Battle:
 
         return total_kills
 
-    def apply_round_losses(self, round_losses, context: CombatContext, state: BattleState):
-        attacker = context.source_player
-        defender = context.target_player
-        for player  in [attacker.player, defender.player]:
-            for troop_type in ["infantry", "lancer", "marksman"]:
-                troop_attr = ("marksmen" if troop_type == "marksman" else troop_type)
-                player_troop = getattr(player.troops, troop_attr)
+    def apply_round_losses(self, round_losses, state: BattleState):
+        for player, losses  in round_losses.items():
+            troop_attr = ("marksmen" if losses == "marksman" else losses)
+            player_troop = getattr(player.troops, troop_attr)
 
-                total_kills = ( round_losses[player][troop_type] + state.kill_remainders[player][troop_type] )
-                remainder , whole_kills  = math.modf(total_kills)
+            total_kills = ( round_losses[player][losses] + state.kill_remainders[player][losses] )
+            remainder , whole_kills  = math.modf(total_kills)
 
-                actual_kills = min(int(whole_kills), player_troop.quantity)
+            actual_kills = min(int(whole_kills), player_troop.quantity)
 
-                player_troop.quantity -= actual_kills
+            player_troop.quantity -= actual_kills
 
-                if player_troop.quantity == 0:
-                    state.kill_remainders[player][troop_type] = 0.0
-                else:
-                    state.kill_remainders[player][troop_type] = remainder
+            if player_troop.quantity == 0:
+                state.kill_remainders[player][losses] = 0.0
+            else:
+                state.kill_remainders[player][losses] = remainder
 
 
         
